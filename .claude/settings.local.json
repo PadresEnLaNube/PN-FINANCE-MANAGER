@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "WebSearch",
+      "WebFetch(domain:site.financialmodelingprep.com)",
+      "WebFetch(domain:twelvedata.com)",
+      "WebFetch(domain:scrapfly.io)",
+      "WebFetch(domain:algotrading101.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:finnhub.io)",
+      "WebFetch(domain:cryptocointracker.com)",
+      "WebFetch(domain:www.marketdata.app)",
+      "WebFetch(domain:api.twelvedata.com)",
+      "Bash(php -l:*)",
+      "Bash(where:*)",
+      "Bash(node:*)",
+      "Bash(del \"C:\\\\Users\\\\Fili\\\\Desktop\\\\WPH\\\\SVN\\\\WPH\\\\WPH PLUGINS\\\\pn-finance-manager\\\\trunk\\\\nul\")",
+      "Bash(xxd:*)",
+      "Bash(python3:*)",
+      "Bash(svn status:*)",
+      "Bash(cd:*)",
+      "WebFetch(domain:support.coingecko.com)",
+      "WebFetch(domain:docs.coingecko.com)",
+      "WebFetch(domain:publicapi.dev)",
+      "WebFetch(domain:www.coingecko.com)",
+      "WebFetch(domain:rapidapi.com)",
+      "Bash(curl:*)"
+    ]
+  }
+}

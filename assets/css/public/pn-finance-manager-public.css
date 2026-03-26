@@ -1,0 +1,20 @@
+/*PN Recipe templates*/
+.pn-finance-manager-recipe-wrapper{
+    padding:50px;
+    max-width:1200px;
+    margin:auto;
+}
+#pn-finance-manager-popup-player{
+    width:800px;
+}
+.pn-finance-manager-carousel{
+    max-width:500px;
+    margin:auto;
+}
+.pn-finance-manager-bordered{
+    border:4px solid;
+}
+.pn-finance-manager-icon-new{
+    font-size:225px!important;
+    padding:50px 0;
+}
