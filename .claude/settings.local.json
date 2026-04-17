@@ -26,7 +26,13 @@
       "WebFetch(domain:publicapi.dev)",
       "WebFetch(domain:www.coingecko.com)",
       "WebFetch(domain:rapidapi.com)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(findstr:*)",
+      "Bash(git status:*)",
+      "Bash(python -c:*)",
+      "WebFetch(domain:leafletjs.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(wc:*)"
     ]
   }
 }

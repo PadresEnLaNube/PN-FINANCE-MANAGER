@@ -22,7 +22,7 @@
  * @link       padresenlanube.com/
  * @since      1.0.0
  *
- * @package    PN_FINANCE_MANAGER
+ * @package    PN_PERSONAL_FINANCE_MANAGER
  */
 
 // If uninstall not called from WordPress, then exit.

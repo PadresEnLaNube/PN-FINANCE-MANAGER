@@ -1,10 +1,10 @@
-=== Finance Manager - PN ===
+=== Personal Finance Manager - PN ===
 Contributors: felixmartinez, hamlet237
 Donate link: https://padresenlanube.com/
 Tags: finance, portfolio, stocks, cryptocurrency, asset manager
 Requires at least: 3.0
 Tested up to: 6.9
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Personal finance manager with asset and liability tracking, real-time stock and 
 
 == Description ==
 
-Finance Manager - PN is a comprehensive personal finance plugin for WordPress that lets users track their complete financial picture: assets, liabilities, investments, and net worth, all from the front-end of your site.
+Personal Finance Manager - PN is a comprehensive personal finance plugin for WordPress that lets users track their complete financial picture: assets, liabilities, investments, and net worth, all from the front-end of your site.
 
 = Asset Tracking (13 Categories) =
 
@@ -102,17 +102,17 @@ Each user can configure:
 
 = User Roles & Permissions =
 
-* Custom **Finance Manager - PN** role with dedicated capabilities.
+* Custom **Personal Finance Manager - PN** role with dedicated capabilities.
 * Admin can assign/remove the role from the Settings page.
 * Users only see their own assets and liabilities.
 * Role-based access control on all CRUD operations.
 
 = Shortcodes =
 
-* `[pn-finance-manager-asset-list]` - Front-end asset management interface.
-* `[pn-finance-manager-liability-list]` - Front-end liability management interface.
-* `[pn_finance_manager_user_assets]` - Portfolio overview with all charts and metrics.
-* `[pn-finance-manager-watchlist]` - Watchlist interface with alerts.
+* `[pn-personal-finance-manager-asset-list]` - Front-end asset management interface.
+* `[pn-personal-finance-manager-liability-list]` - Front-end liability management interface.
+* `[pn_personal_finance_manager_user_assets]` - Portfolio overview with all charts and metrics.
+* `[pn-personal-finance-manager-watchlist]` - Watchlist interface with alerts.
 
 = Admin Tools =
 
@@ -125,7 +125,7 @@ Each user can configure:
 
 = Internationalization =
 
-Fully translation-ready with 200+ translatable strings. Text domain: `pn-finance-manager`. Compatible with Loco Translate and Polylang.
+Fully translation-ready with 200+ translatable strings. Text domain: `pn-personal-finance-manager`. Compatible with Loco Translate and Polylang.
 
 = Compatibility =
 
@@ -137,9 +137,9 @@ Fully translation-ready with 200+ translatable strings. Text domain: `pn-finance
 
 == Installation ==
 
-1. Upload the `pn-finance-manager` folder to the `/wp-content/plugins/` directory, or install directly through the WordPress plugins screen.
+1. Upload the `pn-personal-finance-manager` folder to the `/wp-content/plugins/` directory, or install directly through the WordPress plugins screen.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to **Settings > Finance Manager** to configure your API keys and preferences.
+3. Go to **Settings > Personal Finance Manager** to configure your API keys and preferences.
 4. Create the required pages using the one-click setup buttons in the Settings page, or manually create pages with the shortcodes listed above.
 5. (Optional) Configure the Twelve Data API key for real-time stock data.
 
@@ -175,11 +175,11 @@ Yes, the plugin is designed to work with any WordPress theme, including block th
 
 = Can I use this plugin with any WordPress theme? =
 
-Yes, the Finance Manager - PN plugin is designed to be compatible with any WordPress theme. However, some themes may require additional customization to ensure the plugin's styles integrate seamlessly.
+Yes, the Personal Finance Manager - PN plugin is designed to be compatible with any WordPress theme. However, some themes may require additional customization to ensure the plugin's styles integrate seamlessly.
 
 = Is the plugin translation-ready? =
 
-Yes, the Finance Manager - PN plugin is fully translation-ready. You can use translation plugins such as Loco Translate to translate the plugin into your desired language.
+Yes, the Personal Finance Manager - PN plugin is fully translation-ready. You can use translation plugins such as Loco Translate to translate the plugin into your desired language.
 
 = How do I get support? =
 
@@ -202,20 +202,15 @@ Visit the plugin's support forum on WordPress.org or contact us at info@padresen
 
 This plugin stands on the shoulders of giants
 
-Chart.js v3.9.1
+Chart.js v4.5.1
 Licensed under MIT
-Copyright 2014-2022 Chart.js contributors
+Copyright 2014-2025 Chart.js contributors
 https://www.chartjs.org/
 
-FancyBox v3.5.7
-Licensed GPLv3 for open source use or fancyBox Commercial License for commercial use
-Copyright 2019 fancyApps
-http://fancyapps.com/fancybox/
-
-Tooltipster v4.2.8 - A rockin' custom tooltip jQuery plugin
-Developed by Caleb Jacob and Louis Ameline
-MIT license
-https://calebjacob.github.io/tooltipster/
+Leaflet v1.9.4
+Licensed under BSD-2-Clause
+Copyright 2010-2023 Vladimir Agafonkin
+https://leafletjs.com/
 
 Owl Carousel v2.3.4
 Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
@@ -232,9 +227,47 @@ License MIT - Author : Alexandre Demode (Alex-D)
 https://github.com/Alex-D/Trumbowyg
 
 
+== External Services ==
+
+This plugin relies on the following third-party services to provide real-time financial data and mapping functionality. No personal user data is sent to any of these services.
+
+= Twelve Data API =
+
+Used to retrieve real-time and historical stock prices, search stock symbols, and list available US stocks. API calls are made from the server when users view their stock assets, when the daily cron job runs to record prices, and when the site administrator tests the API connection from the settings page. The data sent is limited to stock ticker symbols and the administrator's API key. A free API key is required (800 calls/day on the free plan).
+
+* Service: [Twelve Data](https://twelvedata.com/)
+* Terms of Service: [https://twelvedata.com/terms](https://twelvedata.com/terms)
+* Privacy Policy: [https://twelvedata.com/privacy](https://twelvedata.com/privacy)
+
+= CoinGecko API =
+
+Used to retrieve real-time cryptocurrency prices, market data, historical price charts, and search for available coins. API calls are made from the server when users view their cryptocurrency assets and when the daily cron job runs. The data sent is limited to cryptocurrency identifiers (e.g., "bitcoin"). No API key is required.
+
+* Service: [CoinGecko](https://www.coingecko.com/)
+* Terms of Service: [https://www.coingecko.com/en/terms](https://www.coingecko.com/en/terms)
+* Privacy Policy: [https://www.coingecko.com/en/privacy](https://www.coingecko.com/en/privacy)
+
+= ExchangeRate API =
+
+Used to retrieve current currency exchange rates for converting asset values between 27 supported currencies. API calls are made from the server and cached locally. The only data sent is the base currency code (USD). No API key is required.
+
+* Service: [ExchangeRate-API](https://www.exchangerate-api.com/)
+* Terms of Service: [https://www.exchangerate-api.com/terms](https://www.exchangerate-api.com/terms)
+* Privacy Policy: [https://www.exchangerate-api.com/terms](https://www.exchangerate-api.com/terms)
+
+= OpenStreetMap =
+
+Used for the optional map field in asset forms. Map tiles are loaded from OpenStreetMap tile servers to display interactive maps via the bundled Leaflet library. Address search (geocoding) uses the Nominatim service. The data sent for geocoding is the search query typed by the user. Map tile requests send standard HTTP headers (including the user's IP address) to OpenStreetMap servers.
+
+* Service: [OpenStreetMap](https://www.openstreetmap.org/)
+* Tile Usage Policy: [https://operations.osmfoundation.org/policies/tiles/](https://operations.osmfoundation.org/policies/tiles/)
+* Nominatim Usage Policy: [https://operations.osmfoundation.org/policies/nominatim/](https://operations.osmfoundation.org/policies/nominatim/)
+* Privacy Policy: [https://wiki.osmfoundation.org/wiki/Privacy_Policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy)
+
+
 == Changelog ==
 
-= 1.1.3 =
+= 1.1.4 =
 * Added sold asset functionality with frozen P/L calculations.
 * Added stock sector and country diversification charts.
 * Added global asset/liability distribution bar chart with net worth.

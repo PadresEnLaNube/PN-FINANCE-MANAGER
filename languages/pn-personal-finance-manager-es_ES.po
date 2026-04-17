@@ -1,0 +1,3745 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Personal Finance Manager - PN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-22 02:01+0000\n"
+"PO-Revision-Date: 2026-04-02 18:39+0000\n"
+"Last-Translator: wordpress-heroes\n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.3; wp-6.9.4; php-8.0.30\n"
+"X-Domain: pn-personal-finance-manager"
+
+#. %1$d: number of users, %2$s: role name
+#: includes/class-pn-personal-finance-manager-ajax.php:798
+#, php-format
+#| msgid "%d user(s) have been assigned the %s role."
+msgid "%1$d user(s) have been assigned the %2$s role."
+msgstr "%1$d usuario(s) se ha(n) asigando al rol %2$s."
+
+#. %1$d: number of users, %2$s: role name
+#: includes/class-pn-personal-finance-manager-ajax.php:805
+#, php-format
+#| msgid "%d user(s) have been removed from the %s role."
+msgid "%1$d user(s) have been removed from the %2$s role."
+msgstr "%1$d usuario(s) han sido eliminados del rol %2$s."
+
+#. %s: field label
+#: includes/class-pn-personal-finance-manager-validation.php:50
+#, php-format
+msgid "%s is required."
+msgstr "%s es obligatorio."
+
+#: includes/class-pn-personal-finance-manager-settings.php:46
+msgid "(Draft)"
+msgstr "(Borrador)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:29
+msgid "-- Select page --"
+msgstr "-- Seleccionar página --"
+
+#: includes/class-pn-personal-finance-manager-settings.php:144
+msgid "1 hour"
+msgstr "1 hora"
+
+#: includes/class-pn-personal-finance-manager-settings.php:185
+msgid "1.1.4"
+msgstr "1.1.4"
+
+#: includes/class-pn-personal-finance-manager-settings.php:142
+msgid "15 minutes"
+msgstr "15 minutos"
+
+#: includes/class-pn-personal-finance-manager-settings.php:145
+msgid "2 hours"
+msgstr "2 horas"
+
+#: includes/class-pn-personal-finance-manager-settings.php:146
+msgid "24 hours"
+msgstr "24 horas"
+
+#: includes/class-pn-personal-finance-manager-settings.php:143
+msgid "30 minutes"
+msgstr "30 minutos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:608
+msgid "401(k)"
+msgstr "401(k)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:141
+msgid "5 minutes"
+msgstr "5 minutos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1083
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1727
+#: templates/public/single-pnpfm_asset.php:20
+#: templates/public/single-pnpfm_asset.php:25
+#: templates/public/archive-pnpfm_liability.php:7
+#: templates/public/archive-pnpfm_asset.php:18
+#: templates/public/single-pnpfm_liability.php:9
+#: templates/public/single-pnpfm_liability.php:14
+msgid "Access Denied"
+msgstr "Acceso denegado"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:614
+msgid "Account Type"
+msgstr "Tipo de cuenta"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1869
+msgid "Active"
+msgstr "Activo"
+
+#: includes/class-pn-personal-finance-manager-common.php:195
+msgid "Add"
+msgstr "Agregar"
+
+#: templates/public/archive-pnpfm_asset.php:72
+msgid "Add asset"
+msgstr "Agregar activo"
+
+#: includes/class-pn-personal-finance-manager-forms.php:392
+msgid "Add audio"
+msgstr "Agregar audio"
+
+#: includes/class-pn-personal-finance-manager-forms.php:392
+msgid "Add audios"
+msgstr "Agregar audios"
+
+#: includes/class-pn-personal-finance-manager-forms.php:485
+msgid "Add element"
+msgstr "Agregar elemento"
+
+#: includes/class-pn-personal-finance-manager-forms.php:413
+msgid "Add file"
+msgstr "Agregar archivo"
+
+#: includes/class-pn-personal-finance-manager-forms.php:413
+msgid "Add files"
+msgstr "Agregar archivos"
+
+#: includes/class-pn-personal-finance-manager-forms.php:350
+msgid "Add image"
+msgstr "Agregar imagen"
+
+#: includes/class-pn-personal-finance-manager-forms.php:350
+msgid "Add images"
+msgstr "Agregar imágenes"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1761
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:869
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:870
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1216
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1682
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1735
+msgid "Add new Asset"
+msgstr "Agregar nuevo activo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:33
+msgid "Add New Asset category"
+msgstr "Agregar nueva categoría de activos"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2601
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:540
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:541
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:821
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1041
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1090
+msgid "Add new Liability"
+msgstr "Agregar nuevo pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:33
+msgid "Add New Liability category"
+msgstr "Agregar nueva categoría de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:63
+msgid "Add New Liability status"
+msgstr "Agregar nuevo estado de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:48
+msgid "Add New Liability type"
+msgstr "Agregar nuevo tipo de pasivo"
+
+#: includes/class-pn-personal-finance-manager-common.php:241
+#: includes/class-pn-personal-finance-manager-watchlist.php:280
+#: includes/admin/class-pn-personal-finance-manager-admin.php:147
+msgid "Add to Watchlist"
+msgstr "Añadir a la lista de seguimiento"
+
+#: includes/class-pn-personal-finance-manager-forms.php:371
+msgid "Add video"
+msgstr "Agregar video"
+
+#: includes/class-pn-personal-finance-manager-forms.php:371
+msgid "Add videos"
+msgstr "Agregar videos"
+
+#: includes/class-pn-personal-finance-manager-tools.php:111
+msgid "ago"
+msgstr "atrás"
+
+#: includes/class-pn-personal-finance-manager-common.php:296
+msgid "Alert Preferences"
+msgstr "Preferencias de alerta"
+
+#: includes/class-pn-personal-finance-manager-common.php:244
+#: includes/class-pn-personal-finance-manager-watchlist.php:260
+#: includes/class-pn-personal-finance-manager-watchlist.php:395
+#: includes/class-pn-personal-finance-manager-watchlist.php:590
+#: includes/admin/class-pn-personal-finance-manager-admin.php:150
+msgid "Alert Threshold"
+msgstr "Umbral de alerta"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:28
+msgid "All Asset categories"
+msgstr "Todas las categorías de activos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:867
+msgid "All Assets"
+msgstr "Todos los activos"
+
+#: includes/class-pn-personal-finance-manager-tools.php:175
+msgid "All letters A-Z are present."
+msgstr "Todas las letras de la A a la Z están presentes."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:538
+msgid "All Liabilities"
+msgstr "Todos los pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:28
+msgid "All Liability categories"
+msgstr "Todas las categorías de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:58
+msgid "All Liability statuses"
+msgstr "Todos los estados de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:43
+msgid "All Liability types"
+msgstr "Todos los tipos de pasivos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:827
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1232
+msgid "All types"
+msgstr "Todo tipo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1246
+msgid "Alphabetical (A-Z)"
+msgstr "Alfabético (A-Z)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1247
+msgid "Alphabetical (Z-A)"
+msgstr "Alfabético (Z-A)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1884
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:457
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:263
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:298
+msgid "Amount"
+msgstr "Cantidad"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1597
+msgid "Amount:"
+msgstr "Cantidad:"
+
+#: includes/class-pn-personal-finance-manager-common.php:158
+#: includes/class-pn-personal-finance-manager-shortcodes.php:449
+#: includes/admin/class-pn-personal-finance-manager-admin.php:80
+msgid "An error has occurred. Please try again in a few minutes."
+msgstr "Se ha producido un error. Inténtelo de nuevo en unos minutos."
+
+#: includes/class-pn-personal-finance-manager-settings.php:393
+#: includes/class-pn-personal-finance-manager-settings.php:399
+msgid "An error occurred while creating the page."
+msgstr "Se produjo un error al crear la página."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:180
+msgid "An error occurred while duplicating the Asset."
+msgstr "Se produjo un error al duplicar el activo."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:284
+msgid "An error occurred while duplicating the Liability."
+msgstr "Se produjo un error al duplicar el pasivo."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:201
+msgid "An error occurred while removing the Asset."
+msgstr "Se produjo un error al eliminar el activo."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:305
+msgid "An error occurred while removing the Liability."
+msgstr "Se produjo un error al eliminar el pasivo."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:121
+#: includes/class-pn-personal-finance-manager-ajax.php:143
+msgid "An error occurred while showing the Asset."
+msgstr "Se produjo un error al mostrar el activo."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:229
+#: includes/class-pn-personal-finance-manager-ajax.php:247
+msgid "An error occurred while showing the Liability."
+msgstr "Se produjo un error al mostrar el pasivo."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:688
+msgid "Annual Premium"
+msgstr "Prima anual"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:354
+msgid "Antique"
+msgstr "Antigüedad"
+
+#: includes/class-pn-personal-finance-manager-settings.php:110
+msgid "API"
+msgstr "API"
+
+#: includes/class-pn-personal-finance-manager-tools.php:304
+msgid "API Configuration"
+msgstr "Configuración de la API"
+
+#: includes/class-pn-personal-finance-manager-tools.php:308
+msgid "API Enabled"
+msgstr "API habilitada"
+
+#: includes/class-pn-personal-finance-manager-tools.php:320
+msgid "API Key"
+msgstr "Clave API"
+
+#: includes/class-pn-personal-finance-manager-tools.php:316
+msgid "API Provider"
+msgstr "Proveedor de API"
+
+#: includes/class-pn-personal-finance-manager-settings.php:419
+msgid "API Status & Information"
+msgstr "Estado e información de la API"
+
+#: includes/class-pn-personal-finance-manager-common.php:248
+#: includes/admin/class-pn-personal-finance-manager-admin.php:154
+msgid "Are you sure you want to remove this item from your watchlist?"
+msgstr ""
+"¿Estás seguro de que quieres eliminar este artículo de tu lista de "
+"seguimiento?"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1544
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:189
+msgid "Argentina"
+msgstr "Argentina"
+
+#: includes/class-pn-personal-finance-manager-data.php:96
+msgid "Art & Collectibles"
+msgstr "Arte y objetos de colección"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1119
+msgid "Asset"
+msgstr "Activo"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1379
+msgid "Asset & Liability Distribution"
+msgstr "Distribución de activos y pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:35
+msgid "Asset categories"
+msgstr "Categorías de activos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:882
+msgid "Asset description"
+msgstr "Descripción del activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:938
+msgid "Asset details"
+msgstr "Detalles del activo"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:372
+msgid "Asset ID is required."
+msgstr "Se requiere el ID del activo."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:484
+#: includes/class-pn-personal-finance-manager-ajax.php:639
+#: includes/class-pn-personal-finance-manager-shortcodes.php:380
+msgid "Asset not found."
+msgstr "Activo no encontrado."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:53
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:54
+msgid "Asset purchase date"
+msgstr "fecha de compra del activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:61
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:62
+msgid "Asset purchase time"
+msgstr "Momento de compra de activos"
+
+#: includes/class-pn-personal-finance-manager-settings.php:195
+#: includes/class-pn-personal-finance-manager-settings.php:196
+msgid "Asset slug"
+msgstr "Slug del activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:69
+msgid "Asset Sold"
+msgstr "Activo vendido"
+
+#: includes/class-pn-personal-finance-manager-activator.php:70
+#: includes/class-pn-personal-finance-manager-activator.php:81
+msgid "Asset Test"
+msgstr "Prueba de activos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:26
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:27
+msgid "Asset title"
+msgstr "Título del activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:102
+msgid "Asset type"
+msgstr "Tipo de activo"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1758
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:865
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:881
+#: includes/class-pn-personal-finance-manager-settings.php:664
+msgid "Assets"
+msgstr "Activos"
+
+#: includes/class-pn-personal-finance-manager-common.php:265
+msgid "assets imported"
+msgstr "activos importados"
+
+#: includes/class-pn-personal-finance-manager-settings.php:70
+#: includes/class-pn-personal-finance-manager-settings.php:665
+msgid "Assets page"
+msgstr "Página de activos"
+
+#. %s: role name
+#: includes/class-pn-personal-finance-manager-forms.php:640
+#, php-format
+msgid "Assign %s Role"
+msgstr "Asignar rol a %s"
+
+#: includes/class-pn-personal-finance-manager-forms.php:234
+msgid "Atleast 8 Character"
+msgstr "Al menos 8 caracteres"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1527
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:172
+msgid "Australia"
+msgstr "Australia"
+
+#: includes/class-pn-personal-finance-manager-data.php:139
+msgid "Australian Dollar (A$)"
+msgstr "Dólar australiano (A$)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:651
+msgid "Auto"
+msgstr "Auto"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2618
+#: includes/class-pn-personal-finance-manager-stocks.php:2654
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1167
+msgid "Balance"
+msgstr "Balance"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:308
+msgid "Barrel"
+msgstr "Barril"
+
+#: templates/public/archive-pnpfm_asset.php:39
+msgid "Base CPT"
+msgstr "CPT base"
+
+#: includes/class-pn-personal-finance-manager-data.php:92
+msgid "Bonds"
+msgstr "Cautiverio"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1531
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:176
+msgid "Brazil"
+msgstr "Brasil"
+
+#: includes/class-pn-personal-finance-manager-data.php:142
+msgid "Brazilian Real (R$)"
+msgstr "Real brasileño (R$)"
+
+#: includes/class-pn-personal-finance-manager-data.php:135
+msgid "British Pound (£)"
+msgstr "Libra esterlina (£)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:312
+msgid "Bushel"
+msgstr "Bushel"
+
+#: includes/class-pn-personal-finance-manager-data.php:98
+msgid "Business Equity"
+msgstr "Capital empresarial"
+
+#: includes/class-pn-personal-finance-manager-data.php:119
+msgid "Business Loan"
+msgstr "Préstamo comercial"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:571
+msgid "Business Name"
+msgstr "Nombre de la empresa"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:596
+msgid "Business Valuation"
+msgstr "Valoración de empresas"
+
+#: includes/class-pn-personal-finance-manager-tools.php:50
+#: includes/class-pn-personal-finance-manager-tools.php:213
+msgid "Cache Actions"
+msgstr "Acciones de caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:359
+msgid "Cache age"
+msgstr "Edad de la caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:508
+msgid "Cache cleared successfully."
+msgstr "Caché borrada correctamente."
+
+#: includes/class-pn-personal-finance-manager-settings.php:148
+msgid "Cache Duration"
+msgstr "Duración de la caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:343
+msgid "Cache Health"
+msgstr "Estado de la caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:98
+msgid "Cache Overview"
+msgstr "Descripción general de la caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:139
+msgid "Cache size"
+msgstr "Tamaño de la caché"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2937
+msgid "Cache Size:"
+msgstr "Tamaño de la caché:"
+
+#: includes/class-pn-personal-finance-manager-tools.php:49
+msgid "Cache Status"
+msgstr "Estado de la caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:119
+msgid "Cache status"
+msgstr "Estado de la caché"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2925
+msgid "Cache Status:"
+msgstr "Estado de la caché:"
+
+#: includes/class-pn-personal-finance-manager-tools.php:453
+msgid ""
+"Cache update failed. Check that the API is configured and enabled in "
+"Settings."
+msgstr ""
+"Error al actualizar la caché. Compruebe que la API esté configurada y "
+"habilitada en Ajustes."
+
+#. %s: number of symbols
+#: includes/class-pn-personal-finance-manager-tools.php:448
+#, php-format
+msgid "Cache updated successfully. Total symbols: %s"
+msgstr "Caché actualizada correctamente. Total de símbolos: %s"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1525
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:170
+msgid "Canada"
+msgstr "Canadá"
+
+#: includes/class-pn-personal-finance-manager-data.php:138
+msgid "Canadian Dollar (C$)"
+msgstr "Dólar canadiense (C$)"
+
+#: templates/pn-personal-finance-manager-popups.php:44
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: includes/class-pn-personal-finance-manager-data.php:114
+msgid "Car Loan"
+msgstr "Préstamo para automóvil"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:361
+msgid "Category"
+msgstr "Categoría"
+
+#: includes/class-pn-personal-finance-manager-settings.php:423
+msgid "Check API Status"
+msgstr "Comprobar el estado de la API"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1520
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:165
+msgid "China"
+msgstr "Porcelana"
+
+#: includes/class-pn-personal-finance-manager-data.php:140
+msgid "Chinese Yuan (¥)"
+msgstr "Yuan chino (¥)"
+
+#: includes/class-pn-personal-finance-manager-common.php:276
+#: includes/class-pn-personal-finance-manager-export-import.php:156
+msgid "Choose how numbers are displayed (decimal and thousands separators)."
+msgstr ""
+"Elige cómo se muestran los números (separadores de decimales y de miles)."
+
+#: includes/class-pn-personal-finance-manager-common.php:272
+#: includes/class-pn-personal-finance-manager-export-import.php:143
+msgid ""
+"Choose the currency used to display your investments and portfolio values."
+msgstr ""
+"Seleccione la moneda que se utilizará para mostrar sus inversiones y el "
+"valor de su cartera."
+
+#: includes/class-pn-personal-finance-manager-common.php:288
+#: includes/class-pn-personal-finance-manager-export-import.php:169
+msgid ""
+"Choose the time period for price comparison displayed on your investment "
+"cards."
+msgstr ""
+"Seleccione el período de tiempo para la comparación de precios que se "
+"muestra en sus tarjetas de inversión."
+
+#: includes/class-pn-personal-finance-manager-tools.php:402
+msgid "Class Availability"
+msgstr "Disponibilidad de clases"
+
+#: includes/class-pn-personal-finance-manager-forms.php:560
+msgid "Clear"
+msgstr "Claro"
+
+#: includes/class-pn-personal-finance-manager-tools.php:236
+#: includes/class-pn-personal-finance-manager-tools.php:239
+#: includes/class-pn-personal-finance-manager-tools.php:275
+msgid "Clear Cache"
+msgstr "Borrar caché"
+
+#: includes/class-pn-personal-finance-manager-tools.php:223
+msgid ""
+"Clears existing cache and fetches fresh symbols from the configured API "
+"provider."
+msgstr ""
+"Borra la caché existente y obtiene nuevos símbolos del proveedor de API "
+"configurado."
+
+#: includes/class-pn-personal-finance-manager-settings.php:421
+msgid "Click the button below to check your API status and limits."
+msgstr ""
+"Haz clic en el botón de abajo para comprobar el estado y los límites de tu "
+"API."
+
+#: includes/class-pn-personal-finance-manager-settings.php:161
+msgid ""
+"Click this button to manually update the list of stock symbols from the API. "
+"Last update: "
+msgstr ""
+"Haz clic en este botón para actualizar manualmente la lista de símbolos "
+"bursátiles desde la API. Última actualización:"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:355
+msgid "Coins"
+msgstr "Monedas"
+
+#: includes/class-pn-personal-finance-manager-settings.php:228
+msgid "Colors"
+msgstr "Colores"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:24
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:35
+msgid "Comments"
+msgstr "Comentarios"
+
+#: includes/class-pn-personal-finance-manager-data.php:93
+msgid "Commodities"
+msgstr "Productos básicos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:286
+msgid "Commodity Name (e.g. Oil, Wheat)"
+msgstr "Nombre del producto básico (por ejemplo, petróleo, trigo)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1513
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:150
+msgid "Communication Services"
+msgstr "Servicios de comunicación"
+
+#: includes/class-pn-personal-finance-manager-common.php:287
+#: includes/class-pn-personal-finance-manager-export-import.php:168
+msgid "Comparison Period"
+msgstr "Período de comparación"
+
+#: includes/class-pn-personal-finance-manager-common.php:297
+msgid ""
+"Configure email alert preferences for price changes on your assets and "
+"watchlist items."
+msgstr ""
+"Configure sus preferencias de alertas por correo electrónico para los "
+"cambios de precio de sus activos y elementos de la lista de seguimiento."
+
+#: includes/class-pn-personal-finance-manager-settings.php:111
+msgid ""
+"Configure the Twelve Data API integration for real-time stock data and cache "
+"settings."
+msgstr ""
+"Configure la integración de la API de Twelve Data para obtener datos "
+"bursátiles en tiempo real y ajustes de caché."
+
+#: includes/class-pn-personal-finance-manager-common.php:209
+#: includes/admin/class-pn-personal-finance-manager-admin.php:123
+msgid "Connection error"
+msgstr "Error de conexión"
+
+#: includes/class-pn-personal-finance-manager-common.php:210
+#: includes/admin/class-pn-personal-finance-manager-admin.php:124
+msgid "Connection error: Could not connect to server"
+msgstr "Error de conexión: No se pudo conectar con el servidor."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1506
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:143
+msgid "Consumer Discretionary"
+msgstr "Consumo discrecional"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1507
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:144
+msgid "Consumer Staples"
+msgstr "Productos de consumo básico"
+
+#: includes/class-pn-personal-finance-manager-common.php:181
+#: includes/admin/class-pn-personal-finance-manager-admin.php:103
+msgid "Copied"
+msgstr "Copiado"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:701
+msgid "Copyright"
+msgstr "Derechos de autor"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:857
+msgid "Could not add item. It may already exist in your watchlist."
+msgstr ""
+"No se pudo agregar el artículo. Es posible que ya exista en tu lista de "
+"seguimiento."
+
+#: includes/class-pn-personal-finance-manager-common.php:227
+#: includes/class-pn-personal-finance-manager-ajax.php:515
+#: includes/class-pn-personal-finance-manager-ajax.php:670
+#: includes/admin/class-pn-personal-finance-manager-admin.php:133
+msgid "Could not fetch price. Try again later."
+msgstr "No se pudo obtener el precio. Inténtalo de nuevo más tarde."
+
+#: includes/class-pn-personal-finance-manager-tools.php:183
+msgid "Count"
+msgstr "Contar"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:192
+msgid "Country"
+msgstr "País"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2203
+msgid "Country Diversification"
+msgstr "Diversificación de países"
+
+#. %s: Page name
+#: includes/class-pn-personal-finance-manager-settings.php:330
+#, php-format
+msgid "Create %s page"
+msgstr "Crear página %s"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1758
+msgid "Create Asset"
+msgstr "Crear activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1109
+msgid "Create Liability"
+msgstr "Crear pasivo"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:109
+msgid "Create new account"
+msgstr "Crear nueva cuenta"
+
+#: includes/class-pn-personal-finance-manager-settings.php:343
+msgid "Creating page..."
+msgstr "Creando página..."
+
+#: includes/class-pn-personal-finance-manager-data.php:116
+msgid "Credit Card Debt"
+msgstr "Deuda de tarjeta de crédito"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:230
+msgid "Credit Limit"
+msgstr "Límite de crédito"
+
+#: includes/class-pn-personal-finance-manager-tools.php:373
+msgid "Cron Schedule"
+msgstr "Programación Cron"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:335
+msgid "Crypto"
+msgstr "Criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2352
+msgid "Crypto Breakdown"
+msgstr "Análisis de criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2280
+msgid "Crypto Portfolio"
+msgstr "Cartera de criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2254
+#: includes/class-pn-personal-finance-manager-common.php:280
+msgid "Crypto Portfolio Performance"
+msgstr "Rendimiento de la cartera de criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-common.php:282
+msgid "Crypto Portfolio Value"
+msgstr "Valor de la cartera de criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-data.php:94
+msgid "Cryptocurrencies"
+msgstr "Criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:250
+#: includes/class-pn-personal-finance-manager-watchlist.php:218
+#: includes/class-pn-personal-finance-manager-watchlist.php:236
+msgid "Cryptocurrency"
+msgstr "Criptomoneda"
+
+#: includes/class-pn-personal-finance-manager-common.php:235
+#: includes/admin/class-pn-personal-finance-manager-admin.php:141
+msgid "Cryptocurrency found and added!"
+msgstr "¡Criptomoneda encontrada y añadida!"
+
+#: includes/class-pn-personal-finance-manager-common.php:236
+#: includes/class-pn-personal-finance-manager-ajax.php:598
+#: includes/admin/class-pn-personal-finance-manager-admin.php:142
+msgid "Cryptocurrency not found. Check the name and try again."
+msgstr "Criptomoneda no encontrada. Compruebe el nombre e inténtelo de nuevo."
+
+#: includes/class-pn-personal-finance-manager-common.php:284
+msgid "Current"
+msgstr "Actual"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:242
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:636
+msgid "Current Balance"
+msgstr "Saldo actual"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:583
+msgid "Current Data:"
+msgstr "Datos actuales:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1907
+#: includes/class-pn-personal-finance-manager-common.php:246
+#: includes/class-pn-personal-finance-manager-watchlist.php:374
+#: includes/class-pn-personal-finance-manager-watchlist.php:588
+#: includes/class-pn-personal-finance-manager-shortcodes.php:482
+#: includes/admin/class-pn-personal-finance-manager-admin.php:152
+msgid "Current Price"
+msgstr "Precio actual"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1777
+#: includes/class-pn-personal-finance-manager-stocks.php:2018
+#: includes/class-pn-personal-finance-manager-stocks.php:2262
+#: includes/class-pn-personal-finance-manager-stocks.php:2441
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:220
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:511
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:559
+#: includes/class-pn-personal-finance-manager-shortcodes.php:496
+msgid "Current Value"
+msgstr "Valor actual"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:339
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:452
+msgid "Current Value (USD)"
+msgstr "Valor actual (USD)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:229
+msgid ""
+"Customize the main color used throughout the application for menus, section "
+"titles, asset labels, and charts."
+msgstr ""
+"Personaliza el color principal que se utiliza en toda la aplicación para "
+"menús, títulos de secciones, etiquetas de recursos y gráficos."
+
+#: includes/class-pn-personal-finance-manager-data.php:152
+msgid "Czech Koruna (Kč)"
+msgstr "Corona checa (Kč)"
+
+#: includes/class-pn-personal-finance-manager-common.php:289
+#: includes/class-pn-personal-finance-manager-export-import.php:171
+msgid "Daily"
+msgstr "A diario"
+
+#: includes/class-pn-personal-finance-manager-common.php:245
+#: includes/class-pn-personal-finance-manager-watchlist.php:378
+#: includes/class-pn-personal-finance-manager-watchlist.php:589
+#: includes/admin/class-pn-personal-finance-manager-admin.php:151
+msgid "Daily Change"
+msgstr "Cambio diario"
+
+#: includes/class-pn-personal-finance-manager-tools.php:380
+msgid "Daily price recording"
+msgstr "Registro diario de precios"
+
+#: includes/class-pn-personal-finance-manager-tools.php:379
+msgid "Daily symbol update"
+msgstr "Actualización diaria de símbolos"
+
+#: includes/class-pn-personal-finance-manager-data.php:150
+msgid "Danish Krone (kr)"
+msgstr "Corona danesa (kr)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2619
+#: includes/class-pn-personal-finance-manager-stocks.php:2661
+msgid "Date"
+msgstr "Fecha"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:502
+msgid "Days Held"
+msgstr "Días celebrados"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:577
+msgid "Debug Info:"
+msgstr "Información de depuración:"
+
+#: includes/class-pn-personal-finance-manager-common.php:298
+#: includes/class-pn-personal-finance-manager-export-import.php:197
+msgid "Default alert threshold"
+msgstr "Umbral de alerta predeterminado"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1242
+msgid "Default order"
+msgstr "Orden predeterminado"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1537
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:182
+msgid "Denmark"
+msgstr "Dinamarca"
+
+#: includes/class-pn-personal-finance-manager-tools.php:51
+msgid "Diagnostics"
+msgstr "Diagnóstico"
+
+#: includes/class-pn-personal-finance-manager-common.php:271
+#: includes/class-pn-personal-finance-manager-export-import.php:142
+msgid "Display Currency"
+msgstr "Mostrar moneda"
+
+#: includes/class-pn-personal-finance-manager-export-import.php:228
+msgid ""
+"Download a backup of your assets, liabilities and watchlist as a JSON file."
+msgstr ""
+"Descarga una copia de seguridad de tus activos, pasivos y lista de "
+"seguimiento como un archivo JSON."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1646
+msgid "Duplicate Asset"
+msgstr "Activo duplicado"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1006
+msgid "Duplicate Liability"
+msgstr "Pasivo duplicado"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:287
+msgid "e.g. Oil, Wheat"
+msgstr "Por ejemplo, aceite, trigo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:524
+msgid "e.g. Toyota Camry"
+msgstr "Por ejemplo, Toyota Camry"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:362
+msgid "Edit alerts"
+msgstr "Editar alertas"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1876
+#: includes/class-pn-personal-finance-manager-stocks.php:1877
+#: includes/class-pn-personal-finance-manager-stocks.php:2434
+#: includes/class-pn-personal-finance-manager-stocks.php:2435
+#: includes/class-pn-personal-finance-manager-stocks.php:2577
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:871
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1634
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1715
+msgid "Edit Asset"
+msgstr "Editar recurso"
+
+#: templates/public/single-pnpfm_asset.php:62
+#: templates/public/archive-pnpfm_asset.php:58
+msgid "Edit asset"
+msgstr "Editar recurso"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:31
+msgid "Edit Asset category"
+msgstr "Editar categoría de activos"
+
+#: includes/class-pn-personal-finance-manager-forms.php:388
+#: includes/class-pn-personal-finance-manager-common.php:170
+#: includes/admin/class-pn-personal-finance-manager-admin.php:92
+msgid "Edit audio"
+msgstr "Editar audio"
+
+#: includes/class-pn-personal-finance-manager-forms.php:388
+#: includes/class-pn-personal-finance-manager-common.php:171
+#: includes/admin/class-pn-personal-finance-manager-admin.php:93
+msgid "Edit audios"
+msgstr "Editar audios"
+
+#: includes/class-pn-personal-finance-manager-forms.php:409
+#: includes/class-pn-personal-finance-manager-common.php:174
+#: includes/admin/class-pn-personal-finance-manager-admin.php:96
+msgid "Edit file"
+msgstr "Editar archivo"
+
+#: includes/class-pn-personal-finance-manager-forms.php:409
+#: includes/class-pn-personal-finance-manager-common.php:175
+#: includes/admin/class-pn-personal-finance-manager-admin.php:97
+msgid "Edit files"
+msgstr "Editar archivos"
+
+#: includes/class-pn-personal-finance-manager-forms.php:346
+#: includes/class-pn-personal-finance-manager-common.php:162
+#: includes/admin/class-pn-personal-finance-manager-admin.php:84
+msgid "Edit image"
+msgstr "Editar imagen"
+
+#: includes/class-pn-personal-finance-manager-forms.php:346
+#: includes/class-pn-personal-finance-manager-common.php:163
+#: includes/admin/class-pn-personal-finance-manager-admin.php:85
+msgid "Edit images"
+msgstr "Editar imágenes"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2647
+#: includes/class-pn-personal-finance-manager-stocks.php:2648
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:542
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:994
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1071
+msgid "Edit Liability"
+msgstr "Editar pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:31
+msgid "Edit Liability category"
+msgstr "Editar categoría de pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:61
+msgid "Edit Liability status"
+msgstr "Editar estado de pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:46
+msgid "Edit Liability type"
+msgstr "Editar tipo de pasivo"
+
+#: includes/class-pn-personal-finance-manager-forms.php:367
+#: includes/class-pn-personal-finance-manager-common.php:166
+#: includes/admin/class-pn-personal-finance-manager-admin.php:88
+msgid "Edit video"
+msgstr "Editar vídeo"
+
+#: includes/class-pn-personal-finance-manager-forms.php:367
+#: includes/class-pn-personal-finance-manager-common.php:167
+#: includes/admin/class-pn-personal-finance-manager-admin.php:89
+msgid "Edit videos"
+msgstr "Editar vídeos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1125
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1774
+msgid "Editing"
+msgstr "Edición"
+
+#: templates/public/single-pnpfm_asset.php:131
+msgid "Elaboration steps"
+msgstr "Pasos de elaboración"
+
+#: includes/class-pn-personal-finance-manager-common.php:299
+#: includes/class-pn-personal-finance-manager-export-import.php:183
+msgid "Enable alerts on my assets"
+msgstr "Habilitar alertas en mis activos"
+
+#: includes/class-pn-personal-finance-manager-common.php:300
+#: includes/class-pn-personal-finance-manager-export-import.php:190
+msgid "Enable alerts on watchlist items"
+msgstr "Habilitar alertas en los elementos de la lista de seguimiento"
+
+#: includes/class-pn-personal-finance-manager-common.php:243
+#: includes/class-pn-personal-finance-manager-watchlist.php:250
+#: includes/class-pn-personal-finance-manager-watchlist.php:385
+#: includes/admin/class-pn-personal-finance-manager-admin.php:149
+msgid "Enable Price Alert"
+msgstr "Activar alerta de precio"
+
+#: includes/class-pn-personal-finance-manager-settings.php:120
+msgid "Enable Stocks API"
+msgstr "Habilitar la API de acciones"
+
+#: includes/class-pn-personal-finance-manager-settings.php:121
+msgid "Enable the stocks API integration for real-time stock data."
+msgstr ""
+"Habilite la integración de la API de acciones para obtener datos bursátiles "
+"en tiempo real."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1509
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:146
+msgid "Energy"
+msgstr "Energía"
+
+#: includes/class-pn-personal-finance-manager-common.php:193
+msgid "Enter a stock symbol (e.g. AAPL)"
+msgstr "Introduzca un símbolo bursátil (por ejemplo, AAPL)."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:458
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:264
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:299
+msgid "Enter amount"
+msgstr "Introduzca la cantidad"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:689
+msgid "Enter annual premium"
+msgstr "Introduzca la prima anual"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:465
+msgid "Enter bond issuer"
+msgstr "Ingrese el emisor del bono"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:572
+msgid "Enter business name"
+msgstr "Ingrese el nombre de la empresa"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:597
+msgid "Enter business valuation"
+msgstr "Ingresar valoración de negocios"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:231
+msgid "Enter credit limit"
+msgstr "Introduzca el límite de crédito"
+
+#: includes/class-pn-personal-finance-manager-common.php:237
+#: includes/admin/class-pn-personal-finance-manager-admin.php:143
+msgid "Enter cryptocurrency name (e.g. Solana)"
+msgstr "Introduzca el nombre de la criptomoneda (por ejemplo, Solana)."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:243
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:637
+msgid "Enter current balance"
+msgstr "Introduzca el saldo actual"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:221
+msgid "Enter current market value"
+msgstr "Introduzca el valor actual de mercado."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:340
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:453
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:512
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:560
+msgid "Enter current value"
+msgstr "Introduzca el valor actual"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:386
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:719
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:733
+msgid "Enter estimated value"
+msgstr "Introduzca el valor estimado"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:477
+msgid "Enter face value"
+msgstr "Introduzca el valor nominal"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:93
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:154
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:205
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:256
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:307
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:394
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:490
+msgid "Enter interest rate"
+msgstr "Ingrese la tasa de interés"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:268
+msgid "Enter minimum payment"
+msgstr "Introduzca el pago mínimo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:105
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:166
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:217
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:319
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:406
+msgid "Enter monthly payment"
+msgstr "Ingrese el pago mensual"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:128
+msgid "Enter number of shares"
+msgstr "Introduzca el número de acciones"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:68
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:129
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:180
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:282
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:333
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:369
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:432
+msgid "Enter original amount"
+msgstr "Introduzca el importe original"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:585
+msgid "Enter ownership percentage"
+msgstr "Introduzca el porcentaje de propiedad"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:677
+msgid "Enter policy value"
+msgstr "Ingrese el valor de la póliza"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:355
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:625
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:665
+msgid "Enter provider name"
+msgstr "Ingrese el nombre del proveedor"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:207
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:276
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:328
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:374
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:441
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:548
+msgid "Enter purchase price"
+msgstr "Introduzca el precio de compra"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:80
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:141
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:192
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:294
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:345
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:381
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:444
+msgid "Enter remaining balance"
+msgstr "Introduzca el saldo restante"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:90
+msgid "Enter sale price"
+msgstr "Introduzca el precio de venta"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:420
+msgid "Enter tax year"
+msgstr "Ingrese el año fiscal"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:224
+msgid "Enter the current market value of the real estate property."
+msgstr "Ingrese el valor de mercado actual de la propiedad inmobiliaria."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:210
+msgid "Enter the purchase price of the real estate property."
+msgstr "Ingrese el precio de compra del inmueble."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:131
+msgid "Enter the total number of shares purchased for this stock asset."
+msgstr ""
+"Introduzca el número total de acciones adquiridas para este activo bursátil."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:415
+msgid "Enter weight"
+msgstr "Introduzca el peso"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:536
+msgid "Enter year"
+msgstr "Ingrese el año"
+
+#: includes/class-pn-personal-finance-manager-settings.php:131
+msgid ""
+"Enter your free API key from Twelve Data. Get a free key at: https:"
+"//twelvedata.com/register (800 calls/day, 8 calls/minute)."
+msgstr ""
+"Introduce tu clave API gratuita de Twelve Data. Consigue una clave gratuita "
+"en: https://twelvedata.com/register (800 llamadas al día, 8 llamadas por "
+"minuto)."
+
+#: includes/class-pn-personal-finance-manager-settings.php:130
+msgid "Enter your Twelve Data API key"
+msgstr "Introduce tu clave API de Twelve Data."
+
+#: includes/class-pn-personal-finance-manager-settings.php:470
+msgid "Error exporting settings."
+msgstr "Error al exportar la configuración."
+
+#: includes/class-pn-personal-finance-manager-common.php:261
+msgid "Error importing portfolio."
+msgstr "Error al importar el portafolio."
+
+#: includes/class-pn-personal-finance-manager-settings.php:468
+msgid "Error importing settings."
+msgstr "Error al importar la configuración."
+
+#: includes/class-pn-personal-finance-manager-common.php:208
+#: includes/admin/class-pn-personal-finance-manager-admin.php:122
+msgid "Error in transcription"
+msgstr "Error en la transcripción"
+
+#: includes/class-pn-personal-finance-manager-common.php:187
+#: includes/class-pn-personal-finance-manager-shortcodes.php:453
+#: includes/admin/class-pn-personal-finance-manager-admin.php:109
+msgid "Error loading stock symbols"
+msgstr "Error al cargar los símbolos de stock"
+
+#: includes/class-pn-personal-finance-manager-common.php:214
+#: includes/admin/class-pn-personal-finance-manager-admin.php:128
+msgid "Error processing audio"
+msgstr "Error al procesar el audio"
+
+#: includes/class-pn-personal-finance-manager-common.php:202
+#: includes/admin/class-pn-personal-finance-manager-admin.php:116
+msgid "Error: Could not access microphone"
+msgstr "Error: No se pudo acceder al micrófono."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:385
+msgid "Estimated Current Value"
+msgstr "Valor actual estimado"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:718
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:732
+msgid "Estimated Value"
+msgstr "Valor estimado"
+
+#: includes/class-pn-personal-finance-manager-data.php:133
+msgid "Euro (€)"
+msgstr "Euro (€)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2928
+#: includes/class-pn-personal-finance-manager-tools.php:122
+msgid "Expired"
+msgstr "Venció"
+
+#: includes/class-pn-personal-finance-manager-tools.php:350
+msgid "Expired / Empty"
+msgstr "Caducado / Vacío"
+
+#: includes/class-pn-personal-finance-manager-tools.php:127
+msgid "Expiry"
+msgstr "Expiración"
+
+#: includes/class-pn-personal-finance-manager-common.php:255
+#: includes/class-pn-personal-finance-manager-export-import.php:225
+#: includes/class-pn-personal-finance-manager-export-import.php:232
+msgid "Export Portfolio"
+msgstr "Portafolio de exportación"
+
+#: includes/class-pn-personal-finance-manager-settings.php:443
+msgid "Export settings"
+msgstr "Exportar configuración"
+
+#: includes/class-pn-personal-finance-manager-common.php:257
+msgid "Exporting..."
+msgstr "Exportador..."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:476
+msgid "Face Value"
+msgstr "Valor nominal"
+
+#: includes/class-pn-personal-finance-manager-tools.php:488
+msgid "Failed to load popular symbols."
+msgstr "No se pudieron cargar los símbolos más populares."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1899
+#: includes/class-pn-personal-finance-manager-common.php:225
+#: includes/admin/class-pn-personal-finance-manager-admin.php:131
+msgid "Fetch price"
+msgstr "Obtener precio"
+
+#: includes/class-pn-personal-finance-manager-common.php:226
+#: includes/admin/class-pn-personal-finance-manager-admin.php:132
+msgid "Fetching..."
+msgstr "Atractivo..."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:818
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1212
+msgid "Filter by type"
+msgstr "Filtrar por tipo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:816
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1209
+msgid "Filter..."
+msgstr "Filtrar..."
+
+#: includes/class-pn-personal-finance-manager-blocks.php:84
+msgid "Personal Finance Manager"
+msgstr "Gestor de Finanzas"
+
+#. Name of the plugin
+#: includes/class-pn-personal-finance-manager-forms.php:608
+#: includes/class-pn-personal-finance-manager-ajax.php:768
+#: includes/class-pn-personal-finance-manager-activator.php:33
+#: includes/class-pn-personal-finance-manager-settings.php:259
+#: includes/class-pn-personal-finance-manager-settings.php:289
+#: includes/class-pn-personal-finance-manager-settings.php:290
+msgid "Personal Finance Manager - PN"
+msgstr "Gestor de Finanzas - PN"
+
+#: includes/class-pn-personal-finance-manager-settings.php:257
+msgid "Personal Finance Manager - PN Role"
+msgstr "Gestor de Finanzas - Puesto PN"
+
+#: includes/class-pn-personal-finance-manager-settings.php:319
+msgid "Personal Finance Manager - PN Settings"
+msgstr "Gestor de Finanzas - Configuración de PN"
+
+#: includes/class-pn-personal-finance-manager-tools.php:55
+msgid "Personal Finance Manager - Tools"
+msgstr "Gestor de Finanzas - Herramientas"
+
+#: includes/class-pn-personal-finance-manager-settings.php:666
+msgid "financial assets"
+msgstr "activos financieros"
+
+#: includes/class-pn-personal-finance-manager-settings.php:673
+msgid "financial liabilities"
+msgstr "pasivos financieros"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1253
+#: includes/class-pn-personal-finance-manager-common.php:222
+msgid "Financial Overview"
+msgstr "Resumen financiero"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1505
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:142
+msgid "Financials"
+msgstr "Finanzas"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1539
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:184
+msgid "Finland"
+msgstr "Finlandia"
+
+#: includes/class-pn-personal-finance-manager-tools.php:221
+#: includes/class-pn-personal-finance-manager-tools.php:273
+msgid "Force Update"
+msgstr "Actualización forzada"
+
+#: includes/class-pn-personal-finance-manager-tools.php:218
+msgid "Force Update from API"
+msgstr "Actualización forzada desde la API"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1524
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:169
+msgid "France"
+msgstr "Francia"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1987
+#: includes/class-pn-personal-finance-manager-stocks.php:2030
+#: includes/class-pn-personal-finance-manager-stocks.php:2274
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:313
+msgid "Gallon"
+msgstr "Galón"
+
+#: includes/class-pn-personal-finance-manager-settings.php:176
+msgid ""
+"General system settings: URL slugs, currency, and plugin cleanup options."
+msgstr ""
+"Configuración general del sistema: URL amigables, moneda y opciones de "
+"limpieza de complementos."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1523
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:168
+msgid "Germany"
+msgstr "Alemania"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:397
+msgid "Gold"
+msgstr "Oro"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:425
+msgid "Gram (g)"
+msgstr "Gramo (g)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:649
+msgid "Health"
+msgstr "Salud"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1504
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:141
+msgid "Healthcare"
+msgstr "Cuidado de la salud"
+
+#: includes/class-pn-personal-finance-manager-forms.php:635
+msgid ""
+"Hold Ctrl (Windows) or Cmd (Mac) to select multiple users. Users with ✓ "
+"already have this role."
+msgstr ""
+"Mantén pulsada la tecla Ctrl (Windows) o Cmd (Mac) para seleccionar varios "
+"usuarios. Los usuarios marcados con ✓ ya tienen este rol."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1542
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:187
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#: includes/class-pn-personal-finance-manager-data.php:147
+msgid "Hong Kong Dollar (HK$)"
+msgstr "Dólar de Hong Kong (HK$)"
+
+#: templates/public/single-pnpfm_asset.php:140
+msgid "hours"
+msgstr "horas"
+
+#: includes/class-pn-personal-finance-manager-settings.php:150
+msgid "How long to cache stock data to avoid excessive API calls."
+msgstr ""
+"¿Cuánto tiempo se deben almacenar en caché los datos bursátiles para evitar "
+"un número excesivo de llamadas a la API?"
+
+#. Author URI of the plugin
+msgid "https://padresenlanube.com/"
+msgstr "https://padresenlanube.com/"
+
+#. URI of the plugin
+msgid "https://padresenlanube.com/plugins/pn-personal-finance-manager/"
+msgstr "https://padresenlanube.com/plugins/pn-personal-finance-manager/"
+
+#: includes/class-pn-personal-finance-manager-data.php:153
+msgid "Hungarian Forint (Ft)"
+msgstr "Florín húngaro (Ft)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:216
+msgid ""
+"If you activate this option the plugin will remove all options on "
+"deactivation. Please, be careful. This process cannot be undone."
+msgstr ""
+"Si activa esta opción, el plugin eliminará todas las demás opciones al "
+"desactivarse. Tenga cuidado, este proceso es irreversible."
+
+#: includes/class-pn-personal-finance-manager-export-import.php:244
+msgid ""
+"Import assets, liabilities and watchlist from a previously exported JSON "
+"file. Existing data will not be overwritten."
+msgstr ""
+"Importa los activos, pasivos y la lista de seguimiento desde un archivo JSON "
+"exportado previamente. Los datos existentes no se sobrescribirán."
+
+#: includes/class-pn-personal-finance-manager-common.php:256
+#: includes/class-pn-personal-finance-manager-export-import.php:241
+#: includes/class-pn-personal-finance-manager-export-import.php:255
+msgid "Import Portfolio"
+msgstr "Portafolio de importación"
+
+#: includes/class-pn-personal-finance-manager-settings.php:440
+msgid "Import settings"
+msgstr "Importar configuración"
+
+#: includes/class-pn-personal-finance-manager-common.php:258
+msgid "Importing..."
+msgstr "Importador..."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1530
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:175
+msgid "India"
+msgstr "India"
+
+#: includes/class-pn-personal-finance-manager-data.php:141
+msgid "Indian Rupee (₹)"
+msgstr "Rupia india (₹)"
+
+#: includes/class-pn-personal-finance-manager-data.php:158
+msgid "Indonesian Rupiah (Rp)"
+msgstr "Rupia indonesia (Rp)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1508
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:145
+msgid "Industrials"
+msgstr "Acciones industriales"
+
+#: templates/public/single-pnpfm_asset.php:113
+msgid "Ingredients"
+msgstr "Ingredientes"
+
+#: includes/class-pn-personal-finance-manager-data.php:100
+msgid "Insurance Policies"
+msgstr "Pólizas de seguro"
+
+#: includes/class-pn-personal-finance-manager-data.php:91
+msgid "Intellectual Property"
+msgstr "Propiedad intelectual"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1168
+msgid "Interest Rate"
+msgstr "Tasa de interés"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:92
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:153
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:204
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:255
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:306
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:393
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:489
+msgid "Interest Rate (%)"
+msgstr "Tasa de interés (%)"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:473
+#: includes/class-pn-personal-finance-manager-ajax.php:628
+msgid "Invalid asset ID."
+msgstr "ID de activo no válido."
+
+#: includes/class-pn-personal-finance-manager-export-import.php:497
+msgid "Invalid export file format."
+msgstr "Formato de archivo de exportación no válido."
+
+#: includes/class-pn-personal-finance-manager-common.php:264
+#: includes/class-pn-personal-finance-manager-ajax.php:945
+msgid "Invalid file format."
+msgstr "Formato de archivo no válido."
+
+#: includes/class-pn-personal-finance-manager-settings.php:469
+msgid "Invalid JSON file."
+msgstr "Archivo JSON no válido."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:689
+msgid "Invalid page type."
+msgstr "Tipo de página no válido."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:771
+msgid "Invalid role specified."
+msgstr "Rol especificado no válido."
+
+#: includes/class-pn-personal-finance-manager-validation.php:159
+msgid "Invalid selection format."
+msgstr "Formato de selección no válido."
+
+#: includes/class-pn-personal-finance-manager-common.php:205
+#: includes/admin/class-pn-personal-finance-manager-admin.php:119
+msgid "Invalid server response"
+msgstr "Respuesta del servidor no válida"
+
+#: includes/class-pn-personal-finance-manager-common.php:204
+#: includes/admin/class-pn-personal-finance-manager-admin.php:118
+msgid "Invalid server response format"
+msgstr "Formato de respuesta del servidor no válido"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2066
+#: includes/class-pn-personal-finance-manager-stocks.php:2310
+#: includes/class-pn-personal-finance-manager-common.php:283
+msgid "Invested"
+msgstr "Invertido"
+
+#: includes/class-pn-personal-finance-manager-settings.php:680
+msgid "investment portfolio"
+msgstr "cartera de inversión"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:706
+msgid "IP Type"
+msgstr "Tipo de IP"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:609
+msgid "IRA"
+msgstr "IRA"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1536
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:181
+msgid "Ireland"
+msgstr "Irlanda"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1540
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:185
+msgid "Israel"
+msgstr "Israel"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:464
+msgid "Issuer"
+msgstr "Editor"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1534
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:179
+msgid "Italy"
+msgstr "Italia"
+
+#: includes/class-pn-personal-finance-manager-ajax-nopriv.php:177
+msgid "Item"
+msgstr "Artículo"
+
+#: includes/class-pn-personal-finance-manager-common.php:250
+#: includes/admin/class-pn-personal-finance-manager-admin.php:156
+msgid "Item added to watchlist"
+msgstr "Artículo añadido a la lista de seguimiento."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1521
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:166
+msgid "Japan"
+msgstr "Japón"
+
+#: includes/class-pn-personal-finance-manager-data.php:136
+msgid "Japanese Yen (¥)"
+msgstr "Yen japonés (¥)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:688
+msgid ""
+"Keep track of stocks and cryptocurrencies you are interested in with price "
+"alerts and real-time data."
+msgstr ""
+"Mantente al tanto de las acciones y criptomonedas que te interesan con "
+"alertas de precios y datos en tiempo real."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:310
+msgid "Kilogram"
+msgstr "Kilogramo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:426
+msgid "Kilogram (kg)"
+msgstr "Kilogramo (kg)"
+
+#: includes/class-pn-personal-finance-manager-tools.php:106
+msgid "Last update"
+msgstr "Última actualización"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2921
+msgid "Last Update:"
+msgstr "Última actualización:"
+
+#: includes/class-pn-personal-finance-manager-tools.php:182
+msgid "Letter"
+msgstr "Carta"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2598
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:536
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:551
+#: includes/class-pn-personal-finance-manager-common.php:217
+#: includes/class-pn-personal-finance-manager-settings.php:671
+#: templates/public/archive-pnpfm_liability.php:23
+msgid "Liabilities"
+msgstr "Pasivo"
+
+#: includes/class-pn-personal-finance-manager-common.php:266
+msgid "liabilities imported"
+msgstr "pasivos importados"
+
+#: includes/class-pn-personal-finance-manager-settings.php:79
+#: includes/class-pn-personal-finance-manager-settings.php:672
+msgid "Liabilities page"
+msgstr "Página de pasivos"
+
+#: includes/class-pn-personal-finance-manager-settings.php:205
+#: includes/class-pn-personal-finance-manager-settings.php:206
+msgid "Liabilities slug"
+msgstr "Slug de pasivos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:739
+msgid "Liability"
+msgstr "Pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:35
+msgid "Liability categories"
+msgstr "Categorías de pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:37
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:38
+msgid "Liability date"
+msgstr "Fecha de pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:552
+msgid "Liability description"
+msgstr "Descripción del pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:595
+msgid "Liability details"
+msgstr "Detalles del pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:65
+msgid "Liability statuses"
+msgstr "Estados del pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:45
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:46
+msgid "Liability time"
+msgstr "Tiempo del pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:15
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:16
+msgid "Liability title"
+msgstr "Título del pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:55
+msgid "Liability type"
+msgstr "Tipo de pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:50
+msgid "Liability types"
+msgstr "Tipos de pasivos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:648
+msgid "Life"
+msgstr "Vida"
+
+#: includes/class-pn-personal-finance-manager-tools.php:230
+#: includes/class-pn-personal-finance-manager-tools.php:274
+msgid "Load Popular"
+msgstr "Cargar popular"
+
+#: includes/class-pn-personal-finance-manager-tools.php:227
+msgid "Load Popular Symbols"
+msgstr "Cargar símbolos populares"
+
+#: includes/class-pn-personal-finance-manager-tools.php:419
+msgid "Loaded"
+msgstr "Cargado"
+
+#: includes/class-pn-personal-finance-manager-common.php:231
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:249
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:846
+#: includes/admin/class-pn-personal-finance-manager-admin.php:137
+msgid "Loading cryptocurrencies..."
+msgstr "Cargando criptomonedas..."
+
+#: includes/class-pn-personal-finance-manager-common.php:185
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:111
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:834
+#: includes/class-pn-personal-finance-manager-shortcodes.php:451
+#: includes/admin/class-pn-personal-finance-manager-admin.php:107
+msgid "Loading stock symbols..."
+msgstr "Cargando símbolos bursátiles..."
+
+#: includes/class-pn-personal-finance-manager-tools.php:232
+msgid ""
+"Loads a curated list of ~20 popular stock symbols as a fallback (no API key "
+"required)."
+msgstr ""
+"Carga una lista seleccionada de aproximadamente 20 símbolos bursátiles "
+"populares como alternativa (no se requiere clave API)."
+
+#: includes/class-pn-personal-finance-manager-forms.php:222
+msgid "Lowercase & Uppercase"
+msgstr "Minúsculas y mayúsculas"
+
+#: includes/class-pn-personal-finance-manager-settings.php:238
+msgid "Main color for menus, section titles, asset labels, and charts."
+msgstr ""
+"Color principal para menús, títulos de secciones, etiquetas de recursos y "
+"gráficos."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:523
+msgid "Make & Model"
+msgstr "Marca y modelo"
+
+#: includes/class-pn-personal-finance-manager-data.php:157
+msgid "Malaysian Ringgit (RM)"
+msgstr "Ringgit malasio (RM)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:667
+msgid ""
+"Manage and track your financial assets including stocks, crypto, real estate,"
+" and more. Monitor performance and portfolio value."
+msgstr ""
+"Gestiona y realiza un seguimiento de tus activos financieros, incluyendo "
+"acciones, criptomonedas, bienes raíces y más. Monitorea el rendimiento y el "
+"valor de tu cartera."
+
+#: includes/class-pn-personal-finance-manager-settings.php:252
+msgid ""
+"Manage which users have the Personal Finance Manager role. Users with this role can "
+"access financial management features."
+msgstr ""
+"Gestiona qué usuarios tienen el rol de Gestor Financiero. Los usuarios con "
+"este rol pueden acceder a las funciones de gestión financiera."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1512
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:149
+msgid "Materials"
+msgstr "Materiales"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:114
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:499
+msgid "Maturity Date"
+msgstr "Fecha de vencimiento"
+
+#: includes/class-pn-personal-finance-manager-data.php:118
+msgid "Medical Debt"
+msgstr "Deuda médica"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:358
+msgid "Memorabilia"
+msgstr "Cosas memorables"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:402
+msgid "Metal Type"
+msgstr "Tipo de metal"
+
+#: includes/class-pn-personal-finance-manager-data.php:145
+msgid "Mexican Peso ($)"
+msgstr "Peso mexicano ($)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1543
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:188
+msgid "Mexico"
+msgstr "México"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:267
+msgid "Minimum Payment"
+msgstr "Pago mínimo"
+
+#: templates/public/single-pnpfm_asset.php:140
+msgid "minutes"
+msgstr "minutos"
+
+#: includes/class-pn-personal-finance-manager-tools.php:419
+msgid "Missing"
+msgstr "Desaparecido"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:653
+msgid "Missing cryptocurrency or purchase date."
+msgstr "Falta la criptomoneda o la fecha de compra."
+
+#: includes/class-pn-personal-finance-manager-tools.php:166
+msgid "Missing letters:"
+msgstr "Letras faltantes:"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:498
+msgid "Missing stock symbol or purchase date."
+msgstr "Falta el símbolo bursátil o la fecha de compra."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:438
+msgid "Missing symbol or name"
+msgstr "Símbolo o nombre faltante"
+
+#: includes/class-pn-personal-finance-manager-common.php:291
+#: includes/class-pn-personal-finance-manager-export-import.php:173
+msgid "Monthly (30d)"
+msgstr "Mensual (30 días)"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:104
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:165
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:216
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:318
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:405
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1169
+msgid "Monthly Payment"
+msgstr "Pago mensual"
+
+#: templates/public/single-pnpfm_asset.php:58
+msgid "More assets"
+msgstr "Más activos"
+
+#: includes/class-pn-personal-finance-manager-data.php:113
+msgid "Mortgage"
+msgstr "Hipoteca"
+
+#: includes/class-pn-personal-finance-manager-common.php:194
+msgid "Multiple matches found. Select the correct one:"
+msgstr "Se encontraron varias coincidencias. Seleccione la correcta:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2857
+#: includes/class-pn-personal-finance-manager-tools.php:133
+#: includes/class-pn-personal-finance-manager-tools.php:365
+msgid "N/A"
+msgstr "N / A"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1809
+#: includes/class-pn-personal-finance-manager-stocks.php:2617
+msgid "Name"
+msgstr "Nombre"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1319
+#: includes/class-pn-personal-finance-manager-stocks.php:1371
+#: includes/class-pn-personal-finance-manager-common.php:218
+msgid "Net Worth"
+msgstr "Patrimonio neto"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1532
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:177
+msgid "Netherlands"
+msgstr "Países Bajos"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2853
+#: includes/class-pn-personal-finance-manager-tools.php:113
+#: includes/class-pn-personal-finance-manager-settings.php:279
+#: includes/class-pn-personal-finance-manager-settings.php:708
+msgid "Never"
+msgstr "Nunca"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:34
+msgid "New Asset category"
+msgstr "Nueva categoría de activos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:34
+msgid "New Liability category"
+msgstr "Nueva categoría de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:64
+msgid "New Liability status"
+msgstr "Nuevo estado de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:49
+msgid "New Liability type"
+msgstr "Nuevo tipo de pasivo"
+
+#: templates/public/single-pnpfm_asset.php:197
+msgid "Next"
+msgstr "Próximo"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2933
+msgid "Next Expiry:"
+msgstr "Próxima fecha de vencimiento:"
+
+#: includes/class-pn-personal-finance-manager-forms.php:820
+#: includes/class-pn-personal-finance-manager-tools.php:311
+msgid "No"
+msgstr "No"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1239
+#: includes/class-pn-personal-finance-manager-shortcodes.php:148
+msgid "No assets found."
+msgstr "No se encontraron activos."
+
+#: includes/class-pn-personal-finance-manager-common.php:203
+#: includes/admin/class-pn-personal-finance-manager-admin.php:117
+msgid "No audio to transcribe"
+msgstr "No hay audio para transcribir"
+
+#: includes/class-pn-personal-finance-manager-common.php:232
+#: includes/admin/class-pn-personal-finance-manager-admin.php:138
+msgid "No cryptocurrencies available"
+msgstr "No hay criptomonedas disponibles"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2001
+msgid "No current data available"
+msgstr "No hay datos disponibles actualmente."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:870
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1287
+msgid "No data to display"
+msgstr "No hay datos para mostrar"
+
+#: includes/class-pn-personal-finance-manager-forms.php:92
+msgid "No file found"
+msgstr "No se encontró ningún archivo."
+
+#: includes/class-pn-personal-finance-manager-common.php:262
+#: includes/class-pn-personal-finance-manager-export-import.php:249
+msgid "No file selected"
+msgstr "No se ha seleccionado ningún archivo."
+
+#: includes/class-pn-personal-finance-manager-forms.php:812
+msgid "No file uploaded"
+msgstr "No se ha subido ningún archivo."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:564
+msgid "No historical data available for chart display."
+msgstr "No hay datos históricos disponibles para la visualización del gráfico."
+
+#: includes/class-pn-personal-finance-manager-forms.php:912
+msgid "No images uploaded"
+msgstr "No se han subido imágenes"
+
+#: includes/class-pn-personal-finance-manager-common.php:221
+#: templates/public/archive-pnpfm_liability.php:33
+msgid "No liabilities found."
+msgstr "No se encontraron pasivos."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:545
+msgid "No Liability found"
+msgstr "No se encontró ningún pasivo."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:546
+msgid "No Liability found in Trash"
+msgstr "No se encontró ningún pasivo en la papelera."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:547
+msgid "No search query provided"
+msgstr "No se proporcionó ninguna consulta de búsqueda."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:215
+msgid "No stock assets found for this user."
+msgstr "No se encontraron activos bursátiles para este usuario."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:396
+msgid "No stock symbol found for this asset."
+msgstr "No se encontró ningún símbolo bursátil para este activo."
+
+#: includes/class-pn-personal-finance-manager-common.php:186
+#: includes/class-pn-personal-finance-manager-shortcodes.php:452
+#: includes/admin/class-pn-personal-finance-manager-admin.php:108
+msgid "No stock symbols available"
+msgstr "No hay símbolos bursátiles disponibles"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:360
+msgid "No symbol provided"
+msgstr "No se proporcionó ningún símbolo"
+
+#: includes/class-pn-personal-finance-manager-tools.php:199
+msgid "No symbols found in cache. Use the Cache Actions tab to populate it."
+msgstr ""
+"No se encontraron símbolos en la caché. Utilice la pestaña Acciones de caché "
+"para rellenarla."
+
+#: includes/class-pn-personal-finance-manager-common.php:207
+#: includes/admin/class-pn-personal-finance-manager-admin.php:121
+msgid "No transcription received from server"
+msgstr "No se recibió ninguna transcripción del servidor."
+
+#. %s: role name
+#: includes/class-pn-personal-finance-manager-forms.php:626
+#, php-format
+msgid "No users currently have the %s role."
+msgstr "Actualmente ningún usuario tiene el rol %s."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:776
+msgid "No users selected."
+msgstr "No se ha seleccionado ningún usuario."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1538
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:183
+msgid "Norway"
+msgstr "Noruega"
+
+#: includes/class-pn-personal-finance-manager-data.php:148
+msgid "Norwegian Krone (kr)"
+msgstr "Corona noruega (kr)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:874
+msgid "Not Asset found"
+msgstr "No se encontró ningún activo."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:875
+msgid "Not Asset found in Trash"
+msgstr "No se encontró ningún recurso en la basura."
+
+#: includes/class-pn-personal-finance-manager-tools.php:393
+msgid "Not scheduled"
+msgstr "No está programado"
+
+#: includes/class-pn-personal-finance-manager-tools.php:326
+msgid "Not set"
+msgstr "No está configurado"
+
+#: includes/class-pn-personal-finance-manager-forms.php:226
+msgid "Number (0-9)"
+msgstr "Número (0-9)"
+
+#: includes/class-pn-personal-finance-manager-common.php:275
+#: includes/class-pn-personal-finance-manager-export-import.php:155
+msgid "Number Format"
+msgstr "Formato de número"
+
+#. %s: minimum value
+#: includes/class-pn-personal-finance-manager-validation.php:95
+#, php-format
+msgid "Number must be at least %s."
+msgstr "El número debe ser como mínimo %s."
+
+#. %s: maximum value
+#: includes/class-pn-personal-finance-manager-validation.php:105
+#, php-format
+msgid "Number must be at most %s."
+msgstr "El número debe ser como máximo %s."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:25
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:36
+msgid "Optional comments"
+msgstr "Comentarios opcionales"
+
+#: includes/class-pn-personal-finance-manager-forms.php:459
+#: includes/class-pn-personal-finance-manager-forms.php:475
+msgid "Order element"
+msgstr "Elemento de orden"
+
+#: includes/class-pn-personal-finance-manager-common.php:178
+#: includes/admin/class-pn-personal-finance-manager-admin.php:100
+msgid "Ordered element"
+msgstr "Elemento ordenado"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:67
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:128
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:179
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:281
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:332
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:368
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:431
+msgid "Original Amount"
+msgstr "Cantidad original"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1514
+#: includes/class-pn-personal-finance-manager-stocks.php:1545
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:151
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:190
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:359
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:612
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:652
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:704
+#: includes/class-pn-personal-finance-manager-data.php:101
+#: includes/class-pn-personal-finance-manager-data.php:121
+msgid "Other"
+msgstr "Otro"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:309
+msgid "Ounce"
+msgstr "Onza"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1171
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1823
+msgid "Owner"
+msgstr "Dueño"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2462
+msgid "Ownership"
+msgstr "Propiedad"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:584
+msgid "Ownership (%)"
+msgstr "Propiedad (%)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:238
+msgid "Ownership Percentage"
+msgstr "Porcentaje de propiedad"
+
+#. Author of the plugin
+msgid "Padres en la Nube"
+msgstr "Padres en la Nube"
+
+#: includes/class-pn-personal-finance-manager-settings.php:24
+msgid "Pages"
+msgstr "Páginas"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:351
+msgid "Painting"
+msgstr "Cuadro"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:400
+msgid "Palladium"
+msgstr "Paladio"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:866
+msgid "Parent Asset"
+msgstr "Activo de la empresa matriz"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:29
+msgid "Parent Asset category"
+msgstr "Categoría de activos principales"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:30
+msgid "Parent Asset category:"
+msgstr "Categoría de activo principal:"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:537
+msgid "Parent Liability"
+msgstr "Pasivo superior"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:29
+msgid "Parent Liability category"
+msgstr "Categoría de pasivo superior"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:30
+msgid "Parent Liability category:"
+msgstr "Categoría de pasivo superior:"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:59
+msgid "Parent Liability status"
+msgstr "Estado de pasivo superior"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:60
+msgid "Parent Liability status:"
+msgstr "Estado de pasivo superior:"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:44
+msgid "Parent Liability type"
+msgstr "Tipo de pasivo superior"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:45
+msgid "Parent Liability type:"
+msgstr "Tipo de pasivo superior:"
+
+#: includes/class-pn-personal-finance-manager-forms.php:218
+msgid "Password strength checker"
+msgstr "Comprobador de seguridad de contraseñas"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:700
+msgid "Patent"
+msgstr "Patentar"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:611
+msgid "Pension"
+msgstr "Pensión"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:91
+msgid "Per unit for stocks/crypto, total for other asset types."
+msgstr ""
+"Por unidad para acciones/criptomonedas, total para otros tipos de activos."
+
+#: includes/class-pn-personal-finance-manager-tools.php:184
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#: includes/class-pn-personal-finance-manager-tools.php:438
+#: includes/class-pn-personal-finance-manager-tools.php:466
+#: includes/class-pn-personal-finance-manager-tools.php:501
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#: includes/class-pn-personal-finance-manager-common.php:211
+#: includes/admin/class-pn-personal-finance-manager-admin.php:125
+msgid "Permission error: Security verification failed"
+msgstr "Error de permisos: Falló la verificación de seguridad."
+
+#. Description of the plugin
+msgid ""
+"Personal finance manager with asset and liability tracking, real-time stock "
+"portfolio monitoring (Twelve Data), historical price charts, multi-currency "
+"support (27 currencies), user role management, and admin diagnostic tools."
+msgstr ""
+"Gestor de finanzas personales con seguimiento de activos y pasivos, "
+"monitorización en tiempo real de la cartera de valores (Twelve Data), "
+"gráficos de precios históricos, compatibilidad con múltiples divisas (27 "
+"divisas), gestión de roles de usuario y herramientas de diagnóstico para "
+"administradores."
+
+#: includes/class-pn-personal-finance-manager-data.php:117
+msgid "Personal Loan"
+msgstr "Préstamo personal"
+
+#: includes/class-pn-personal-finance-manager-data.php:159
+msgid "Philippine Peso (₱)"
+msgstr "Peso filipino (₱)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:353
+msgid "Photograph"
+msgstr "Fotografía"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:399
+msgid "Platinum"
+msgstr "Platino"
+
+#: templates/public/single-pnpfm_asset.php:134
+msgid "Play asset"
+msgstr "Recurso de juego"
+
+#: includes/class-pn-personal-finance-manager-forms.php:528
+msgid "Play audio"
+msgstr "Reproducir audio"
+
+#: includes/class-pn-personal-finance-manager-common.php:159
+#: includes/admin/class-pn-personal-finance-manager-admin.php:81
+msgid "Please create a new user or login to save the information."
+msgstr ""
+"Por favor, cree un nuevo usuario o inicie sesión para guardar la información."
+
+#: includes/class-pn-personal-finance-manager-validation.php:141
+msgid "Please enter a valid date."
+msgstr "Por favor, introduzca una fecha válida."
+
+#: includes/class-pn-personal-finance-manager-validation.php:67
+msgid "Please enter a valid email address."
+msgstr "Por favor, introduce una dirección de correo electrónico válida."
+
+#: includes/class-pn-personal-finance-manager-validation.php:86
+msgid "Please enter a valid number."
+msgstr "Por favor, introduzca un número válido."
+
+#: includes/class-pn-personal-finance-manager-validation.php:76
+msgid "Please enter a valid URL."
+msgstr "Por favor, introduzca una URL válida."
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:172
+msgid "Please log in to view your watchlist."
+msgstr "Inicie sesión para ver su lista de seguimiento."
+
+#: includes/class-pn-personal-finance-manager-common.php:263
+msgid "Please select a file first."
+msgstr "Por favor, seleccione primero un archivo."
+
+#: includes/class-pn-personal-finance-manager-validation.php:150
+msgid "Please select a valid option."
+msgstr "Por favor, seleccione una opción válida."
+
+#: includes/class-pn-personal-finance-manager-validation.php:167
+msgid "Please select valid options."
+msgstr "Seleccione opciones válidas."
+
+#: includes/class-pn-personal-finance-manager-tools.php:257
+msgid "Please wait..."
+msgstr "Espere por favor..."
+
+#: includes/class-pn-personal-finance-manager-settings.php:318
+msgid "Plugin main Banner"
+msgstr "Banner principal del plugin"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:654
+msgid "Policy Type"
+msgstr "Tipo de póliza"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:676
+msgid "Policy Value"
+msgstr "Valor de la póliza"
+
+#: includes/class-pn-personal-finance-manager-data.php:151
+msgid "Polish Złoty (zł)"
+msgstr "Zloty polaco (zł)"
+
+#. %d: number of symbols
+#: includes/class-pn-personal-finance-manager-tools.php:483
+msgid "Popular symbols loaded successfully. Total: %d"
+msgstr "Símbolos populares cargados correctamente. Total: %d"
+
+#: includes/class-pn-personal-finance-manager-export-import.php:36
+#: includes/class-pn-personal-finance-manager-watchlist.php:606
+#: includes/class-pn-personal-finance-manager-settings.php:678
+msgid "Portfolio"
+msgstr "Cartera"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1248
+msgid "Portfolio % (highest first)"
+msgstr "Porcentaje de la cartera (de mayor a menor)"
+
+#: includes/class-pn-personal-finance-manager-common.php:259
+msgid "Portfolio exported successfully!"
+msgstr "¡Portafolio exportado con éxito!"
+
+#: includes/class-pn-personal-finance-manager-common.php:260
+msgid "Portfolio imported successfully!"
+msgstr "¡Portafolio importado correctamente!"
+
+#: includes/class-pn-personal-finance-manager-settings.php:88
+#: includes/class-pn-personal-finance-manager-settings.php:679
+msgid "Portfolio page"
+msgstr "Página de portafolio"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:302
+msgid "Portfolio Performance"
+msgstr "Rendimiento de la cartera"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1393
+msgid "Portfolio Value"
+msgstr "Valor de la cartera"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:177
+msgid "Portfolio Value:"
+msgstr "Valor de la cartera:"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:528
+msgid "Position Performance"
+msgstr "Desempeño del puesto"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:863
+msgctxt "Post Type general name"
+msgid "Assets"
+msgstr "Activos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:534
+msgctxt "Post Type general name"
+msgid "Liabilities"
+msgstr "Pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:864
+msgctxt "Post Type singular name"
+msgid "Asset"
+msgstr "Activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:535
+msgctxt "Post Type singular name"
+msgid "Liability"
+msgstr "Pasivo"
+
+#: includes/class-pn-personal-finance-manager-data.php:95
+msgid "Precious Metals"
+msgstr "Metales preciosos"
+
+#: includes/class-pn-personal-finance-manager-common.php:302
+msgid "Preferences saved successfully!"
+msgstr "¡Preferencias guardadas correctamente!"
+
+#: templates/public/single-pnpfm_asset.php:194
+msgid "Previous"
+msgstr "Anterior"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:578
+msgid "Price Alert - Personal Finance Manager"
+msgstr "Alerta de precios - Gestor de finanzas"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:581
+msgid "Price Alert Notification"
+msgstr "Notificación de alerta de precio"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1916
+msgid "Price Variation"
+msgstr "Variación de precio"
+
+#: includes/class-pn-personal-finance-manager-settings.php:237
+msgid "Primary Color"
+msgstr "Color primario"
+
+#: includes/class-pn-personal-finance-manager-tools.php:256
+msgid "Processing..."
+msgstr "Tratamiento..."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1327
+#: includes/class-pn-personal-finance-manager-stocks.php:1785
+#: includes/class-pn-personal-finance-manager-stocks.php:1812
+#: includes/class-pn-personal-finance-manager-stocks.php:1938
+#: includes/class-pn-personal-finance-manager-stocks.php:2485
+#: includes/class-pn-personal-finance-manager-shortcodes.php:510
+msgid "Profit/Loss"
+msgstr "Ganancia/Pérdida"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:650
+msgid "Property"
+msgstr "Propiedad"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1534
+msgid "Property Value:"
+msgstr "Valor de la propiedad:"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:354
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:624
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:664
+msgid "Provider"
+msgstr "Proveedor"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1814
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1821
+msgid "Purchase Date"
+msgstr "Fecha de compra"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:580
+msgid "Purchase Date:"
+msgstr "Fecha de compra:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1888
+#: includes/class-pn-personal-finance-manager-stocks.php:2450
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:206
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:373
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:547
+#: includes/class-pn-personal-finance-manager-shortcodes.php:476
+msgid "Purchase Price"
+msgstr "Precio de compra"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:275
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:327
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:440
+msgid "Purchase Price (USD)"
+msgstr "Precio de compra (USD)"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:582
+msgid "Purchase Price:"
+msgstr "Precio de compra:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2584
+msgid "Purchased:"
+msgstr "Comprado:"
+
+#: includes/class-pn-personal-finance-manager-forms.php:503
+#: includes/class-pn-personal-finance-manager-common.php:198
+#: includes/admin/class-pn-personal-finance-manager-admin.php:112
+msgid "Ready to record"
+msgstr "Listo para grabar"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1511
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:148
+#: includes/class-pn-personal-finance-manager-data.php:90
+msgid "Real Estate"
+msgstr "Bienes raíces"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2524
+msgid "Real Estate Breakdown"
+msgstr "Análisis del mercado inmobiliario"
+
+#: includes/class-pn-personal-finance-manager-common.php:201
+#: includes/admin/class-pn-personal-finance-manager-admin.php:115
+msgid "Recording completed. Ready to transcribe."
+msgstr "Grabación finalizada. Lista para transcribir."
+
+#: includes/class-pn-personal-finance-manager-common.php:200
+#: includes/admin/class-pn-personal-finance-manager-admin.php:114
+msgid "Recording stopped. Ready to play or transcribe."
+msgstr "Grabación detenida. Listo para reproducir o transcribir."
+
+#: includes/class-pn-personal-finance-manager-common.php:199
+#: includes/admin/class-pn-personal-finance-manager-admin.php:113
+msgid "Recording..."
+msgstr "Grabación..."
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:182
+msgid "Refresh prices"
+msgstr "Actualizar precios"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:79
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:140
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:191
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:293
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:344
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:380
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:443
+msgid "Remaining Balance"
+msgstr "Saldo restante"
+
+#: templates/pn-personal-finance-manager-popups.php:39
+msgid "removal"
+msgstr "eliminación"
+
+#: templates/pn-personal-finance-manager-popups.php:47
+#: includes/class-pn-personal-finance-manager-common.php:242
+#: includes/class-pn-personal-finance-manager-watchlist.php:365
+#: includes/admin/class-pn-personal-finance-manager-admin.php:148
+msgid "Remove"
+msgstr "Eliminar"
+
+#. %s: role name
+#: includes/class-pn-personal-finance-manager-forms.php:642
+#, php-format
+msgid "Remove %s Role"
+msgstr "Eliminar el rol %s"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1658
+msgid "Remove Asset"
+msgstr "Eliminar activo"
+
+#: includes/class-pn-personal-finance-manager-forms.php:463
+#: includes/class-pn-personal-finance-manager-forms.php:479
+msgid "Remove element"
+msgstr "Eliminar elemento"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1018
+msgid "Remove Liability"
+msgstr "Eliminar el pasivo"
+
+#: includes/class-pn-personal-finance-manager-settings.php:215
+msgid "Remove plugin options on deactivation"
+msgstr "Eliminar opciones de complementos al desactivar."
+
+#: includes/class-pn-personal-finance-manager-common.php:161
+#: includes/admin/class-pn-personal-finance-manager-admin.php:83
+msgid "Removed successfully"
+msgstr "Eliminado correctamente"
+
+#: includes/class-pn-personal-finance-manager-tools.php:241
+msgid ""
+"Removes all cached symbol data. The cache will be rebuilt on next access."
+msgstr ""
+"Elimina todos los datos de símbolos almacenados en caché. La caché se "
+"reconstruirá en el siguiente acceso."
+
+#: includes/class-pn-personal-finance-manager-tools.php:269
+msgid "Request failed. Please try again."
+msgstr "La solicitud ha fallado. Por favor, inténtelo de nuevo."
+
+#: includes/class-pn-personal-finance-manager-forms.php:683
+#: includes/class-pn-personal-finance-manager-forms.php:750
+msgid "Required field"
+msgstr "Campo obligatorio"
+
+#: includes/class-pn-personal-finance-manager-data.php:99
+msgid "Retirement Accounts"
+msgstr "Cuentas de jubilación"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:610
+msgid "Roth IRA"
+msgstr "Roth IRA"
+
+#: includes/class-pn-personal-finance-manager-data.php:143
+msgid "Russian Ruble (₽)"
+msgstr "Rublo ruso (₽)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1953
+#: includes/class-pn-personal-finance-manager-stocks.php:2500
+#: includes/class-pn-personal-finance-manager-common.php:308
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:77
+msgid "Sale Date"
+msgstr "Fecha de venta"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:78
+msgid "Sale date"
+msgstr "Fecha de venta"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1959
+#: includes/class-pn-personal-finance-manager-stocks.php:2506
+#: includes/class-pn-personal-finance-manager-common.php:309
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:89
+msgid "Sale Price"
+msgstr "Precio de venta"
+
+#: includes/class-pn-personal-finance-manager-common.php:251
+#: includes/class-pn-personal-finance-manager-watchlist.php:412
+#: includes/admin/class-pn-personal-finance-manager-admin.php:157
+msgid "Save alerts"
+msgstr "Guardar alertas"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1798
+msgid "Save Asset"
+msgstr "Guardar activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1145
+msgid "Save Liability"
+msgstr "Guardar pasivo"
+
+#: includes/class-pn-personal-finance-manager-settings.php:414
+#: includes/class-pn-personal-finance-manager-settings.php:447
+msgid "Save options"
+msgstr "Guardar opciones"
+
+#: includes/class-pn-personal-finance-manager-common.php:301
+msgid "Save Preferences"
+msgstr "Guardar preferencias"
+
+#: includes/class-pn-personal-finance-manager-export-import.php:206
+msgid "Save preferences"
+msgstr "Guardar preferencias"
+
+#: includes/class-pn-personal-finance-manager-common.php:160
+#: includes/admin/class-pn-personal-finance-manager-admin.php:82
+msgid "Saved successfully"
+msgstr "Guardado correctamente"
+
+#: includes/class-pn-personal-finance-manager-common.php:252
+#: includes/admin/class-pn-personal-finance-manager-admin.php:158
+msgid "Saved!"
+msgstr "¡Salvado!"
+
+#: includes/class-pn-personal-finance-manager-common.php:303
+msgid "Saving..."
+msgstr "Ahorro..."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:352
+msgid "Sculpture"
+msgstr "Escultura"
+
+#: includes/class-pn-personal-finance-manager-common.php:189
+msgid "Search"
+msgstr "Buscar"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:27
+msgid "Search Asset categories"
+msgstr "Buscar categorías de activos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:873
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1211
+msgid "Search Assets"
+msgstr "Buscar activos"
+
+#: includes/class-pn-personal-finance-manager-common.php:233
+#: includes/admin/class-pn-personal-finance-manager-admin.php:139
+msgid "Search cryptocurrency"
+msgstr "Buscar criptomonedas"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:544
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:817
+msgid "Search Liabilities"
+msgstr "Buscar pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:27
+msgid "Search Liability categories"
+msgstr "Buscar categorías de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:57
+msgid "Search Liability statuses"
+msgstr "Buscar estados de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:42
+msgid "Search Liability types"
+msgstr "Buscar tipos de pasivos"
+
+#: includes/class-pn-personal-finance-manager-common.php:188
+msgid "Search new symbol"
+msgstr "Buscar nuevo símbolo"
+
+#: includes/class-pn-personal-finance-manager-common.php:190
+#: includes/class-pn-personal-finance-manager-common.php:234
+#: includes/admin/class-pn-personal-finance-manager-admin.php:140
+msgid "Searching..."
+msgstr "Búsqueda..."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:153
+msgid "Sector"
+msgstr "Sector"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2155
+msgid "Sector Breakdown"
+msgstr "Desglose del sector"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:763
+msgid "Security check failed."
+msgstr "Falló la comprobación de seguridad."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:636
+#: includes/class-pn-personal-finance-manager-ajax-nopriv.php:36
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:999
+msgid "Security check failed: Invalid nonce."
+msgstr "Falló la comprobación de seguridad: Nonce no válido."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:629
+#: includes/class-pn-personal-finance-manager-ajax-nopriv.php:27
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:990
+msgid "Security check failed: Nonce is required."
+msgstr "Falló la comprobación de seguridad: se requiere un nonce."
+
+#: includes/class-pn-personal-finance-manager-common.php:230
+#: includes/class-pn-personal-finance-manager-watchlist.php:243
+#: includes/admin/class-pn-personal-finance-manager-admin.php:136
+msgid "Select a cryptocurrency"
+msgstr "Seleccione una criptomoneda"
+
+#: includes/class-pn-personal-finance-manager-common.php:184
+#: includes/class-pn-personal-finance-manager-watchlist.php:231
+#: includes/class-pn-personal-finance-manager-shortcodes.php:450
+#: includes/admin/class-pn-personal-finance-manager-admin.php:106
+msgid "Select a stock symbol"
+msgstr "Seleccione un símbolo bursátil"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:615
+msgid "Select account type"
+msgstr "Seleccione el tipo de cuenta"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:103
+msgid "Select asset type"
+msgstr "Seleccione el tipo de activo"
+
+#: includes/class-pn-personal-finance-manager-common.php:172
+#: includes/admin/class-pn-personal-finance-manager-admin.php:94
+msgid "Select audio"
+msgstr "Seleccionar audio"
+
+#: includes/class-pn-personal-finance-manager-common.php:173
+#: includes/admin/class-pn-personal-finance-manager-admin.php:95
+msgid "Select audios"
+msgstr "Seleccionar audios"
+
+#: includes/class-pn-personal-finance-manager-settings.php:149
+msgid "Select cache duration"
+msgstr "Seleccione la duración de la caché."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:362
+msgid "Select category"
+msgstr "Seleccione categoría"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:163
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:193
+msgid "Select country"
+msgstr "Seleccione país"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:251
+msgid "Select cryptocurrency"
+msgstr "Seleccione la criptomoneda"
+
+#: includes/class-pn-personal-finance-manager-settings.php:186
+msgid "Select currency"
+msgstr "Seleccione la moneda"
+
+#: includes/class-pn-personal-finance-manager-common.php:176
+#: includes/admin/class-pn-personal-finance-manager-admin.php:98
+msgid "Select file"
+msgstr "Seleccionar archivo"
+
+#: includes/class-pn-personal-finance-manager-common.php:177
+#: includes/admin/class-pn-personal-finance-manager-admin.php:99
+msgid "Select files"
+msgstr "Seleccionar archivos"
+
+#: includes/class-pn-personal-finance-manager-common.php:164
+#: includes/admin/class-pn-personal-finance-manager-admin.php:86
+msgid "Select image"
+msgstr "Seleccionar imagen"
+
+#: includes/class-pn-personal-finance-manager-common.php:165
+#: includes/admin/class-pn-personal-finance-manager-admin.php:87
+msgid "Select images"
+msgstr "Seleccionar imágenes"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:707
+msgid "Select IP type"
+msgstr "Seleccione el tipo de IP"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:56
+msgid "Select liability type"
+msgstr "Seleccione el tipo de pasivo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:115
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:500
+msgid "Select maturity date"
+msgstr "Seleccione la fecha de vencimiento"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:403
+msgid "Select metal type"
+msgstr "Seleccione el tipo de metal"
+
+#: includes/class-pn-personal-finance-manager-common.php:179
+#: includes/admin/class-pn-personal-finance-manager-admin.php:101
+msgid "Select option"
+msgstr "Seleccione una opción"
+
+#: includes/class-pn-personal-finance-manager-common.php:180
+#: includes/admin/class-pn-personal-finance-manager-admin.php:102
+msgid "Select options"
+msgstr "Seleccione opciones"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:655
+msgid "Select policy type"
+msgstr "Seleccione el tipo de póliza"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:139
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:154
+msgid "Select sector"
+msgstr "Seleccionar sector"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:113
+msgid "Select stock symbol"
+msgstr "Seleccione el símbolo bursátil"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:254
+msgid ""
+"Select the cryptocurrency for this asset. The list is populated from "
+"CoinGecko sorted by market cap."
+msgstr ""
+"Seleccione la criptomoneda para este activo. La lista se genera a partir de "
+"datos de CoinGecko ordenados por capitalización de mercado."
+
+#: includes/class-pn-personal-finance-manager-settings.php:187
+msgid ""
+"Select the currency that will be used throughout the application for "
+"financial calculations and displays."
+msgstr ""
+"Seleccione la moneda que se utilizará en toda la aplicación para los "
+"cálculos y la visualización de datos financieros."
+
+#: includes/class-pn-personal-finance-manager-settings.php:71
+msgid "Select the page where users will manage their assets."
+msgstr "Seleccione la página donde los usuarios gestionarán sus activos."
+
+#: includes/class-pn-personal-finance-manager-settings.php:80
+msgid "Select the page where users will manage their liabilities."
+msgstr "Seleccione la página donde los usuarios gestionarán sus obligaciones."
+
+#: includes/class-pn-personal-finance-manager-settings.php:98
+msgid "Select the page where users will manage their watchlist."
+msgstr ""
+"Seleccione la página donde los usuarios gestionarán su lista de seguimiento."
+
+#: includes/class-pn-personal-finance-manager-settings.php:89
+msgid ""
+"Select the page where users will see their portfolio summary and performance."
+msgstr ""
+"Seleccione la página donde los usuarios verán el resumen y el rendimiento de "
+"su cartera."
+
+#: includes/class-pn-personal-finance-manager-settings.php:25
+msgid ""
+"Select the pages where each plugin feature will be displayed. Each page "
+"should contain the corresponding shortcode."
+msgstr ""
+"Seleccione las páginas donde se mostrará cada función del plugin. Cada "
+"página debe contener el código corto correspondiente."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:116
+msgid ""
+"Select the stock symbol for this asset. The list is populated from the "
+"configured stock API."
+msgstr ""
+"Seleccione el símbolo bursátil de este activo. La lista se genera a partir "
+"de la API bursátil configurada."
+
+#: includes/class-pn-personal-finance-manager-common.php:247
+#: includes/class-pn-personal-finance-manager-watchlist.php:215
+#: includes/admin/class-pn-personal-finance-manager-admin.php:153
+msgid "Select Type"
+msgstr "Seleccione el tipo"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:316
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:429
+msgid "Select unit"
+msgstr "Seleccione la unidad"
+
+#: includes/class-pn-personal-finance-manager-forms.php:629
+msgid "Select Users"
+msgstr "Seleccionar usuarios"
+
+#: includes/class-pn-personal-finance-manager-common.php:168
+#: includes/admin/class-pn-personal-finance-manager-admin.php:90
+msgid "Select video"
+msgstr "Seleccionar vídeo"
+
+#: includes/class-pn-personal-finance-manager-common.php:169
+#: includes/admin/class-pn-personal-finance-manager-admin.php:91
+msgid "Select videos"
+msgstr "Seleccionar vídeos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:241
+msgid "Select your ownership percentage of this property."
+msgstr "Seleccione su porcentaje de propiedad sobre este inmueble."
+
+#: includes/class-pn-personal-finance-manager-common.php:212
+#: includes/admin/class-pn-personal-finance-manager-admin.php:126
+msgid "Server error: Internal server problem"
+msgstr "Error del servidor: Problema interno del servidor"
+
+#: includes/class-pn-personal-finance-manager-settings.php:299
+#: includes/class-pn-personal-finance-manager-settings.php:300
+#: includes/class-pn-personal-finance-manager-settings.php:617
+msgid "Settings"
+msgstr "Ajustes"
+
+#: includes/class-pn-personal-finance-manager-settings.php:467
+msgid "Settings imported successfully. Reloading..."
+msgstr "Configuración importada correctamente. Recargando..."
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1884
+#: includes/class-pn-personal-finance-manager-shortcodes.php:470
+msgid "Shares"
+msgstr "Acciones"
+
+#: includes/class-pn-personal-finance-manager-forms.php:852
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1563
+msgid "Shares:"
+msgstr "Acciones:"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:398
+msgid "Silver"
+msgstr "Plata"
+
+#: includes/class-pn-personal-finance-manager-common.php:293
+#: includes/class-pn-personal-finance-manager-export-import.php:175
+msgid "Since purchase"
+msgstr "Desde la compra"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1541
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:186
+msgid "Singapore"
+msgstr "Singapur"
+
+#: includes/class-pn-personal-finance-manager-data.php:146
+msgid "Singapore Dollar (S$)"
+msgstr "Dólar de Singapur (S$)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1856
+#: includes/class-pn-personal-finance-manager-stocks.php:2423
+#: includes/class-pn-personal-finance-manager-common.php:307
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1867
+msgid "Sold"
+msgstr "Vendido"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:586
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:924
+msgid "Sorry, you are not allowed to access this resource."
+msgstr "Lo sentimos, no tiene permiso para acceder a este recurso."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1213
+msgid "Sort"
+msgstr "Clasificar"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1816
+#: includes/class-pn-personal-finance-manager-stocks.php:2621
+#: includes/class-pn-personal-finance-manager-common.php:312
+msgid "Sort ascending"
+msgstr "Ordenar de forma ascendente"
+
+#: includes/class-pn-personal-finance-manager-common.php:313
+msgid "Sort descending"
+msgstr "Ordenar de forma descendente"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:587
+msgid "Source"
+msgstr "Fuente"
+
+#: includes/class-pn-personal-finance-manager-data.php:155
+msgid "South African Rand (R)"
+msgstr "Rand sudafricano (R)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1528
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:173
+msgid "South Korea"
+msgstr "Corea del Sur"
+
+#: includes/class-pn-personal-finance-manager-data.php:144
+msgid "South Korean Won (₩)"
+msgstr "Won surcoreano (₩)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1533
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:178
+msgid "Spain"
+msgstr "España"
+
+#: includes/class-pn-personal-finance-manager-forms.php:230
+msgid "Special Character (!@#$%^&*)"
+msgstr "Carácter especial (!@#$%^&*)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:356
+msgid "Stamps"
+msgstr "sellos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1170
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#: includes/class-pn-personal-finance-manager-forms.php:512
+msgid "Start recording"
+msgstr "Comienza la grabación"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1822
+#: includes/class-pn-personal-finance-manager-tools.php:347
+msgid "Status"
+msgstr "Estado"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:217
+#: includes/class-pn-personal-finance-manager-watchlist.php:335
+msgid "Stock"
+msgstr "Acciones"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2036
+#: includes/class-pn-personal-finance-manager-shortcodes.php:228
+msgid "Stock Portfolio"
+msgstr "Cartera de acciones"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2010
+#: includes/class-pn-personal-finance-manager-common.php:279
+msgid "Stock Portfolio Performance"
+msgstr "Rendimiento de la cartera de acciones"
+
+#: includes/class-pn-personal-finance-manager-common.php:281
+msgid "Stock Portfolio Value"
+msgstr "Valor de la cartera de acciones"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:112
+#: includes/class-pn-personal-finance-manager-watchlist.php:224
+msgid "Stock Symbol"
+msgstr "Símbolo bursátil"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2913
+msgid "Stock Symbols Cache Information"
+msgstr "Información de caché de símbolos bursátiles"
+
+#: includes/class-pn-personal-finance-manager-settings.php:687
+msgid "stock watchlist"
+msgstr "lista de seguimiento de acciones"
+
+#: includes/class-pn-personal-finance-manager-data.php:89
+msgid "Stocks"
+msgstr "Acciones"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2108
+msgid "Stocks Breakdown"
+msgstr "Desglose de acciones"
+
+#: includes/class-pn-personal-finance-manager-forms.php:535
+msgid "Stop audio"
+msgstr "Detener audio"
+
+#: includes/class-pn-personal-finance-manager-forms.php:519
+msgid "Stop recording"
+msgstr "Detener la grabación"
+
+#: includes/class-pn-personal-finance-manager-data.php:115
+msgid "Student Loan"
+msgstr "Préstamo estudiantil"
+
+#: templates/public/single-pnpfm_asset.php:206
+msgid "Suggestions"
+msgstr "Sugerencias"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1535
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:180
+msgid "Sweden"
+msgstr "Suecia"
+
+#: includes/class-pn-personal-finance-manager-data.php:149
+msgid "Swedish Krona (kr)"
+msgstr "Corona sueca (kr)"
+
+#: includes/class-pn-personal-finance-manager-data.php:137
+msgid "Swiss Franc (CHF)"
+msgstr "Franco suizo (CHF)"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1526
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:171
+msgid "Switzerland"
+msgstr "Suiza"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:585
+msgid "Symbol"
+msgstr "Símbolo"
+
+#: includes/class-pn-personal-finance-manager-tools.php:146
+msgid "Symbol Distribution by First Letter"
+msgstr "Distribución de símbolos por primera letra"
+
+#: includes/class-pn-personal-finance-manager-common.php:191
+msgid "Symbol found and added!"
+msgstr "¡Símbolo encontrado y añadido!"
+
+#: includes/class-pn-personal-finance-manager-common.php:192
+#: includes/class-pn-personal-finance-manager-ajax.php:415
+msgid "Symbol not found. Check the ticker and try again."
+msgstr "Símbolo no encontrado. Compruebe el símbolo y vuelva a intentarlo."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:579
+msgid "Symbol:"
+msgstr "Símbolo:"
+
+#: includes/class-pn-personal-finance-manager-tools.php:170
+msgid "Symbols appear to end at letter S - possible truncation detected."
+msgstr ""
+"Los símbolos parecen terminar en la letra S; se ha detectado una posible "
+"truncación."
+
+#: includes/class-pn-personal-finance-manager-tools.php:355
+msgid "Symbols count"
+msgstr "Conteo de símbolos"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2917
+msgid "Symbols in Cache:"
+msgstr "Símbolos en caché:"
+
+#: includes/class-pn-personal-finance-manager-settings.php:175
+msgid "System"
+msgstr "Sistema"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1529
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:174
+msgid "Taiwan"
+msgstr "Taiwán"
+
+#: includes/class-pn-personal-finance-manager-data.php:120
+msgid "Tax Obligations"
+msgstr "Obligaciones fiscales"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:419
+msgid "Tax Year"
+msgstr "Año fiscal"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:25
+msgctxt "Taxonomy general name"
+msgid "Asset category"
+msgstr "Categoría de activos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:25
+msgctxt "Taxonomy general name"
+msgid "Liability category"
+msgstr "Categoría de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:55
+msgctxt "Taxonomy general name"
+msgid "Liability status"
+msgstr "Estado de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:40
+msgctxt "Taxonomy general name"
+msgid "Liability type"
+msgstr "Tipo de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:26
+msgctxt "Taxonomy singular name"
+msgid "Asset category"
+msgstr "Categoría de activos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:26
+msgctxt "Taxonomy singular name"
+msgid "Liability category"
+msgstr "Categoría de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:56
+msgctxt "Taxonomy singular name"
+msgid "Liability status"
+msgstr "Estado de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:41
+msgctxt "Taxonomy singular name"
+msgid "Liability type"
+msgstr "Tipo de pasivos"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1503
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:140
+msgid "Technology"
+msgstr "Tecnología"
+
+#. %d: minimum character count
+#: includes/class-pn-personal-finance-manager-validation.php:120
+msgid "Text must be at least %d characters long."
+msgstr "El texto debe tener al menos %d caracteres de longitud."
+
+#. %d: maximum character count
+#: includes/class-pn-personal-finance-manager-validation.php:130
+msgid "Text must be at most %d characters long."
+msgstr "El texto debe tener como máximo %d caracteres de longitud."
+
+#: includes/class-pn-personal-finance-manager-data.php:156
+msgid "Thai Baht (฿)"
+msgstr "Baht tailandés (฿)"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:582
+msgid "The following items have exceeded their price alert threshold:"
+msgstr "Los siguientes artículos han superado su umbral de alerta de precio:"
+
+#: includes/class-pn-personal-finance-manager-settings.php:324
+msgid ""
+"The following required pages have not been detected on your site. Click the "
+"buttons below to automatically create them as drafts. Each page will open in "
+"a new tab for you to review and publish."
+msgstr ""
+"No se han detectado las siguientes páginas obligatorias en tu sitio web. Haz "
+"clic en los botones de abajo para crearlas automáticamente como borradores. "
+"Cada página se abrirá en una pestaña nueva para que la revises y publiques."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:388
+msgid "This asset is not a stock."
+msgstr "Este activo no es una acción."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1608
+msgid "This Asset is periodic"
+msgstr "Este activo es periódico."
+
+#: includes/class-pn-personal-finance-manager-validation.php:51
+msgid "This field"
+msgstr "Este campo"
+
+#: includes/class-pn-personal-finance-manager-watchlist.php:620
+msgid ""
+"This is an automated alert from Personal Finance Manager. You can change your alert "
+"preferences in your profile settings."
+msgstr ""
+"Esta es una alerta automática del Administrador Financiero. Puede cambiar "
+"sus preferencias de alerta en la configuración de su perfil."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:970
+msgid "This Liability is periodic"
+msgstr "Esta obligación es periódica."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:966
+msgid "This Liability is timed"
+msgstr "Esta obligación tiene un plazo determinado."
+
+#: includes/class-pn-personal-finance-manager-settings.php:197
+msgid ""
+"This option sets the slug of the main Asset archive page, and the Asset "
+"pages. By default they will be:"
+msgstr ""
+"Esta opción establece el slug de la página principal del archivo de activos "
+"y de las páginas de activos. Por defecto serán:"
+
+#: includes/class-pn-personal-finance-manager-settings.php:207
+msgid ""
+"This option sets the slug of the main Liabilities archive page, and the "
+"Liabilities pages. By default they will be:"
+msgstr ""
+"Esta opción establece el slug de la página principal del archivo de Pasivos "
+"y de las páginas de Pasivos. Por defecto serán:"
+
+#: includes/class-pn-personal-finance-manager-common.php:268
+msgid ""
+"This will add new entries to your portfolio. Existing data will not be "
+"overwritten. Continue?"
+msgstr ""
+"Esto añadirá nuevas entradas a su cartera. Los datos existentes no se "
+"sobrescribirán. ¿Desea continuar?"
+
+#: includes/class-pn-personal-finance-manager-settings.php:466
+msgid "This will overwrite your current settings. Continue?"
+msgstr "Esto sobrescribirá tu configuración actual. ¿Continuar?"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:311
+msgid "Ton"
+msgstr "Tonelada"
+
+#: includes/class-pn-personal-finance-manager-tools.php:33
+#: includes/class-pn-personal-finance-manager-tools.php:34
+msgid "Tools"
+msgstr "Herramientas"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1415
+msgid "Total"
+msgstr "Total"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:127
+msgid "Total Amount"
+msgstr "Cantidad total"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:581
+msgid "Total Amount:"
+msgstr "Importe total:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1299
+#: includes/class-pn-personal-finance-manager-common.php:219
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1389
+msgid "Total Assets"
+msgstr "Activos totales"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:173
+msgid "Total Assets:"
+msgstr "Activos totales:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1305
+#: includes/class-pn-personal-finance-manager-stocks.php:1771
+#: includes/class-pn-personal-finance-manager-stocks.php:1929
+#: includes/class-pn-personal-finance-manager-stocks.php:2014
+#: includes/class-pn-personal-finance-manager-stocks.php:2258
+#: includes/class-pn-personal-finance-manager-stocks.php:2476
+#: includes/class-pn-personal-finance-manager-shortcodes.php:490
+msgid "Total Invested"
+msgstr "Inversión total"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1313
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:911
+#: includes/class-pn-personal-finance-manager-common.php:220
+msgid "Total Liabilities"
+msgstr "Pasivos totales"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:181
+msgid "Total P&L:"
+msgstr "Pérdidas y ganancias totales:"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1336
+#: includes/class-pn-personal-finance-manager-stocks.php:1791
+#: includes/class-pn-personal-finance-manager-stocks.php:2022
+#: includes/class-pn-personal-finance-manager-stocks.php:2266
+#: includes/class-pn-personal-finance-manager-shortcodes.php:516
+msgid "Total Return"
+msgstr "Retorno total"
+
+#: includes/class-pn-personal-finance-manager-tools.php:102
+msgid "Total symbols"
+msgstr "Símbolos totales"
+
+#: templates/public/single-pnpfm_asset.php:140
+msgid "Total time"
+msgstr "Tiempo total"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:231
+msgid "Total Value:"
+msgstr "Valor total:"
+
+#: includes/class-pn-personal-finance-manager-settings.php:674
+msgid ""
+"Track and manage your financial liabilities including mortgages, loans, "
+"credit cards, and other debts in one place."
+msgstr ""
+"Controla y gestiona tus obligaciones financieras, incluyendo hipotecas, "
+"préstamos, tarjetas de crédito y otras deudas, en un solo lugar."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:703
+msgid "Trade Secret"
+msgstr "secreto comercial"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:702
+msgid "Trademark"
+msgstr "Marca"
+
+#: includes/class-pn-personal-finance-manager-forms.php:553
+msgid "Transcribe Audio"
+msgstr "Transcribir audio"
+
+#: includes/class-pn-personal-finance-manager-forms.php:574
+msgid "Transcribed text will appear here..."
+msgstr "El texto transcrito aparecerá aquí..."
+
+#: includes/class-pn-personal-finance-manager-common.php:206
+#: includes/admin/class-pn-personal-finance-manager-admin.php:120
+msgid "Transcription completed"
+msgstr "Transcripción completada"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:424
+msgid "Troy Ounce (oz)"
+msgstr "Onza troy (oz)"
+
+#: includes/class-pn-personal-finance-manager-data.php:154
+msgid "Turkish Lira (₺)"
+msgstr "Lira turca (₺)"
+
+#: includes/class-pn-personal-finance-manager-settings.php:129
+msgid "Twelve Data API Key"
+msgstr "Clave API de Twelve Data"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1166
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1819
+#: includes/class-pn-personal-finance-manager-watchlist.php:209
+#: includes/class-pn-personal-finance-manager-watchlist.php:586
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:570
+msgid "Unable to calculate performance metrics. Please check:"
+msgstr ""
+"No se pueden calcular las métricas de rendimiento. Por favor, compruebe:"
+
+#: includes/class-pn-personal-finance-manager-ajax.php:576
+msgid "Unable to connect to crypto data service"
+msgstr "No se puede conectar al servicio de datos criptográficos."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:387
+msgid "Unable to connect to stock data service"
+msgstr "No se puede conectar al servicio de datos bursátiles."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:753
+msgid "Unauthorized access."
+msgstr "Acceso no autorizado."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:315
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:428
+msgid "Unit"
+msgstr "Unidad"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1522
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:167
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1519
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:164
+msgid "United States"
+msgstr "Estados Unidos"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2585
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: includes/class-pn-personal-finance-manager-common.php:213
+#: includes/admin/class-pn-personal-finance-manager-admin.php:127
+msgid "Unknown error"
+msgstr "Error desconocido"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:872
+msgid "Update Asset"
+msgstr "Actualizar activo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-asset.php:32
+msgid "Update Asset category"
+msgstr "Actualizar categoría de activos"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:543
+msgid "Update Liability"
+msgstr "Actualizar pasivo"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:32
+msgid "Update Liability category"
+msgstr "Actualizar categoría de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:62
+msgid "Update Liability status"
+msgstr "Actualizar el estado de pasivos"
+
+#: includes/class-pn-personal-finance-manager-taxonomies-liability.php:47
+msgid "Update Liability type"
+msgstr "Actualizar tipo de pasivos"
+
+#: includes/class-pn-personal-finance-manager-settings.php:160
+msgid "Update Stock Symbols Now"
+msgstr "Actualizar símbolos bursátiles ahora"
+
+#: includes/class-pn-personal-finance-manager-data.php:134
+msgid "US Dollar ($)"
+msgstr "Dólar estadounidense ($)"
+
+#. %s: default currency label
+#: includes/class-pn-personal-finance-manager-export-import.php:146
+#, php-format
+msgid "Use site default (%s)"
+msgstr "Usar la configuración predeterminada del sitio (%s)"
+
+#: includes/class-pn-personal-finance-manager-tools.php:214
+msgid ""
+"Use these buttons to manage the stock symbols cache. Actions are executed "
+"via AJAX."
+msgstr ""
+"Utilice estos botones para gestionar la caché de símbolos bursátiles. Las "
+"acciones se ejecutan mediante AJAX."
+
+#: includes/class-pn-personal-finance-manager-settings.php:251
+msgid "User Role Management"
+msgstr "Gestión de roles de usuario"
+
+#. %s: role name
+#: includes/class-pn-personal-finance-manager-forms.php:617
+#, php-format
+msgid "Users with %s Role"
+msgstr "Usuarios con el rol %s"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1510
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:147
+msgid "Utilities"
+msgstr "Servicios públicos"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2928
+#: includes/class-pn-personal-finance-manager-tools.php:122
+#: includes/class-pn-personal-finance-manager-tools.php:350
+msgid "Valid"
+msgstr "Válido"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:1810
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1820
+msgid "Value"
+msgstr "Valor"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1244
+msgid "Value (highest first)"
+msgstr "Valor (de mayor a menor)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1245
+msgid "Value (lowest first)"
+msgstr "Valor (del más bajo al más alto)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1566
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1600
+msgid "Value:"
+msgstr "Valor:"
+
+#: includes/class-pn-personal-finance-manager-data.php:97
+msgid "Vehicles"
+msgstr "vehículos"
+
+#: includes/class-pn-personal-finance-manager-data.php:160
+msgid "Vietnamese Dong (₫)"
+msgstr "Dong vietnamita (₫)"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:868
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1622
+msgid "View Asset"
+msgstr "Ver activo"
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:539
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:982
+msgid "View Liability"
+msgstr "Ver pasivo"
+
+#: includes/class-pn-personal-finance-manager-settings.php:681
+msgid ""
+"View your complete investment portfolio with performance charts, profit/loss "
+"tracking, and asset allocation overview."
+msgstr ""
+"Visualice su cartera de inversiones completa con gráficos de rendimiento, "
+"seguimiento de ganancias/pérdidas y resumen de la asignación de activos."
+
+#: includes/class-pn-personal-finance-manager-common.php:240
+#: includes/class-pn-personal-finance-manager-watchlist.php:181
+#: includes/class-pn-personal-finance-manager-watchlist.php:607
+#: includes/class-pn-personal-finance-manager-settings.php:685
+#: includes/admin/class-pn-personal-finance-manager-admin.php:146
+msgid "Watchlist"
+msgstr "Lista de seguimiento"
+
+#: includes/class-pn-personal-finance-manager-common.php:267
+msgid "watchlist items imported"
+msgstr "Elementos de la lista de seguimiento importados"
+
+#: includes/class-pn-personal-finance-manager-settings.php:97
+#: includes/class-pn-personal-finance-manager-settings.php:686
+msgid "Watchlist page"
+msgstr "Página de la lista de seguimiento"
+
+#: includes/class-pn-personal-finance-manager-common.php:290
+#: includes/class-pn-personal-finance-manager-export-import.php:172
+msgid "Weekly (7d)"
+msgstr "Semanal (7 días)"
+
+#: includes/class-pn-personal-finance-manager-tools.php:378
+msgid "Weekly symbol update"
+msgstr "Actualización semanal de símbolos"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:414
+msgid "Weight"
+msgstr "Peso"
+
+#: templates/pn-personal-finance-manager-popups.php:40
+msgid ""
+"will be completely deleted. This process cannot be reversed and cannot be "
+"recovered."
+msgstr ""
+"Se eliminará por completo. Este proceso no se puede revertir ni recuperar."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:357
+msgid "Wine"
+msgstr "Vino"
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:535
+msgid "Year"
+msgstr "Año"
+
+#: includes/class-pn-personal-finance-manager-common.php:292
+#: includes/class-pn-personal-finance-manager-export-import.php:174
+msgid "Yearly (365d)"
+msgstr "Anual (365 días)"
+
+#: includes/class-pn-personal-finance-manager-forms.php:820
+#: includes/class-pn-personal-finance-manager-tools.php:311
+msgid "Yes"
+msgstr "Sí"
+
+#: includes/class-pn-personal-finance-manager-ajax-nopriv.php:144
+#: includes/class-pn-personal-finance-manager-ajax-nopriv.php:188
+#: includes/class-pn-personal-finance-manager-ajax-nopriv.php:193
+msgid "You are not authorized to perform this action."
+msgstr "Usted no está autorizado a realizar esta acción."
+
+#: includes/class-pn-personal-finance-manager-forms.php:602
+msgid "You do not have permission to manage user roles."
+msgstr "No tienes permiso para administrar los roles de usuario."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:678
+msgid "You do not have permission to perform this action."
+msgstr "No tienes permiso para realizar esta acción."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:490
+#: includes/class-pn-personal-finance-manager-ajax.php:645
+msgid "You do not have permission to update this asset."
+msgstr "No tienes permiso para actualizar este recurso."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:119
+msgid "You do not have permission to view these assets."
+msgstr "No tienes permiso para ver estos archivos."
+
+#: templates/public/single-pnpfm_asset.php:25
+msgid "You do not have permission to view this asset."
+msgstr "No tienes permiso para ver este recurso."
+
+#: templates/public/single-pnpfm_liability.php:14
+msgid "You do not have permission to view this liability."
+msgstr "No tiene permiso para ver esta información legal."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:104
+msgid ""
+"You have to be registered in the platform to access your financial portfolio."
+msgstr ""
+"Para acceder a su cartera financiera, debe estar registrado en la plataforma."
+
+#: includes/class-pn-personal-finance-manager-post-type-asset.php:1727
+#: includes/class-pn-personal-finance-manager-ajax.php:153
+msgid "You must be logged in to create a new asset."
+msgstr "Debes iniciar sesión para crear un nuevo activo."
+
+#: includes/class-pn-personal-finance-manager-post-type-liability.php:1083
+#: includes/class-pn-personal-finance-manager-ajax.php:257
+msgid "You must be logged in to create a new liability."
+msgstr "Debes iniciar sesión para crear un nuevo pasivo."
+
+#: templates/public/single-pnpfm_asset.php:20
+#: templates/public/archive-pnpfm_asset.php:18
+msgid "You must be logged in to view assets."
+msgstr "Debes iniciar sesión para ver los activos."
+
+#: templates/public/archive-pnpfm_liability.php:7
+#: templates/public/single-pnpfm_liability.php:9
+msgid "You must be logged in to view liabilities."
+msgstr "Debes iniciar sesión para ver tus pasivos."
+
+#: includes/class-pn-personal-finance-manager-ajax.php:478
+#: includes/class-pn-personal-finance-manager-ajax.php:633
+#: includes/class-pn-personal-finance-manager-ajax.php:817
+#: includes/class-pn-personal-finance-manager-ajax.php:864
+#: includes/class-pn-personal-finance-manager-ajax.php:888
+#: includes/class-pn-personal-finance-manager-ajax.php:908
+#: includes/class-pn-personal-finance-manager-ajax.php:922
+#: includes/class-pn-personal-finance-manager-ajax.php:937
+msgid "You must be logged in."
+msgstr "Debes haber iniciado sesión."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:103
+msgid "You need an account"
+msgstr "Necesitas una cuenta"
+
+#: includes/class-pn-personal-finance-manager-stocks.php:2466
+msgid "Your Share"
+msgstr "Tu parte"
+
+#: includes/class-pn-personal-finance-manager-common.php:249
+#: includes/class-pn-personal-finance-manager-watchlist.php:299
+#: includes/admin/class-pn-personal-finance-manager-admin.php:155
+msgid "Your watchlist is empty. Add stocks or cryptocurrencies to track."
+msgstr ""
+"Tu lista de seguimiento está vacía. Agrega acciones o criptomonedas para "
+"seguir."
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:575
+msgid "• Alpha Vantage API is working"
+msgstr "• La API de Alpha Vantage funciona"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:573
+msgid "• Purchase date is set"
+msgstr "• Se establece la fecha de compra"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:572
+msgid "• Stock symbol is configured"
+msgstr "• El símbolo bursátil está configurado"
+
+#: includes/class-pn-personal-finance-manager-shortcodes.php:574
+msgid "• Total amount (shares) is entered"
+msgstr "• Se introduce el importe total (acciones)."

@@ -1,0 +1,108 @@
+#adminmenu #menu-posts-pn_personal_finance_manager_asset .wp-menu-image img, #adminmenu #menu-posts-pn_personal_finance_manager_liability .wp-menu-image img, #adminmenu #toplevel_page_pn_personal_finance_manager_options .wp-menu-image img{
+    padding:5px 0 0;
+}
+
+/* User Role Selector */
+.pn-personal-finance-manager-user-role-selector-wrapper {
+    padding: 10px 0;
+}
+.pn-personal-finance-manager-users-with-role-box {
+    background: #f0f6fc;
+    border: 1px solid #c3d9ed;
+    border-radius: 6px;
+}
+.pn-personal-finance-manager-users-with-role-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.pn-personal-finance-manager-user-role-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 13px;
+}
+.pn-personal-finance-manager-user-role-item i {
+    font-size: 16px;
+    color: #787c82;
+}
+.pn-personal-finance-manager-role-badge {
+    display: inline-block;
+    background: #2271b1;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+.pn-personal-finance-manager-user-role-select {
+    min-height: 200px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 4px;
+}
+.pn-personal-finance-manager-user-role-select option {
+    padding: 4px 8px;
+}
+.pn-personal-finance-manager-user-role-select option[data-has-role="true"] {
+    background: #f0f6fc;
+    font-weight: 600;
+}
+.pn-personal-finance-manager-role-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.pn-personal-finance-manager-alert-warning {
+    background: #fcf9e8;
+    border: 1px solid #dba617;
+    border-radius: 6px;
+    color: #6e4b00;
+}
+.pn-personal-finance-manager-alert-warning i {
+    color: #dba617;
+}
+.pn-personal-finance-manager-color-success {
+    color: #00a32a;
+}
+.pn-personal-finance-manager-color-error {
+    color: #d63638;
+}
+.pn-personal-finance-manager-role-message p {
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 0;
+}
+.pn-personal-finance-manager-role-message .pn-personal-finance-manager-color-success {
+    background: #edfaef;
+    border: 1px solid #00a32a;
+}
+.pn-personal-finance-manager-role-message .pn-personal-finance-manager-color-error {
+    background: #fcf0f1;
+    border: 1px solid #d63638;
+}
+.pn-personal-finance-manager-input-wrapper.pn-personal-finance-manager-input-field-user_role_selector:has(input[type="hidden"]) {
+    display: block !important;
+}
+/* Settings sticky footer bar */
+.pn-personal-finance-manager-settings-pb-80{padding-bottom:80px}
+.pn-personal-finance-manager-settings-footer{position:fixed;bottom:0;left:160px;right:0;height:50px;background:#fff;z-index:99999;box-shadow:0 -2px 8px rgba(0,0,0,.08);border-top:1px solid #dcdcde;display:flex;align-items:center}
+body.folded .pn-personal-finance-manager-settings-footer{left:36px}
+@media screen and (max-width:960px){body.auto-fold .pn-personal-finance-manager-settings-footer{left:36px}}
+@media screen and (max-width:782px){.pn-personal-finance-manager-settings-footer{left:0;z-index:9989}.pn-personal-finance-manager-settings-footer-plugin-name{display:none}}
+.pn-personal-finance-manager-settings-footer-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1000px;margin:0 auto;padding:0 20px}
+.pn-personal-finance-manager-settings-footer-left{display:flex;align-items:center;gap:10px}
+.pn-personal-finance-manager-settings-footer-plugin-name{color:#1d2327;font-size:12px;font-weight:600}
+.pn-personal-finance-manager-settings-footer-version{color:#787c82;font-size:12px;font-family:monospace}
+.pn-personal-finance-manager-settings-footer-right{display:flex;align-items:center;gap:8px}
+.pn-personal-finance-manager-settings-footer-icon-btn{background:none;border:1px solid #dcdcde;border-radius:6px;color:#787c82;cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;padding:0;transition:all .2s ease}
+.pn-personal-finance-manager-settings-footer-icon-btn:hover{background:#f0f0f1;border-color:#8c8f94;color:#1d2327}
+.pn-personal-finance-manager-settings-footer-icon-btn .material-icons-outlined{font-size:20px}
+.pn-personal-finance-manager-settings-footer .pn-personal-finance-manager-btn{margin:0}
+#pn_personal_finance_manager_submit.pn-personal-finance-manager-settings-hidden-submit,#pn-personal-finance-manager-settings-import-file.pn-personal-finance-manager-settings-hidden-input{display:none !important}

@@ -1,0 +1,101 @@
+/* Statistics Panel Styles */
+.pn-personal-finance-manager-statistics-panel {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+.pn-personal-finance-manager-statistics-empty {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.pn-personal-finance-manager-statistics-metrics {
+  margin-bottom: 20px;
+}
+
+.pn-personal-finance-manager-statistics-chart-wrapper {
+  max-width: 400px;
+  max-height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Legend */
+.pn-personal-finance-manager-statistics-legend {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.pn-personal-finance-manager-legend-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.pn-personal-finance-manager-legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.pn-personal-finance-manager-legend-label {
+  flex: 1;
+  font-size: 14px;
+  color: #495057;
+}
+
+.pn-personal-finance-manager-legend-value {
+  font-size: 14px;
+  color: #212529;
+  font-weight: 500;
+  text-align: right;
+}
+
+.pn-personal-finance-manager-legend-total {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0;
+  margin-top: 8px;
+  border-top: 1px solid #dee2e6;
+}
+
+.pn-personal-finance-manager-legend-total .pn-personal-finance-manager-legend-label {
+  padding-left: 22px;
+}
+
+.pn-personal-finance-manager-legend-total .pn-personal-finance-manager-legend-value {
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pn-personal-finance-manager-statistics-panel {
+    padding: 15px;
+  }
+
+  .pn-personal-finance-manager-statistics-chart-wrapper {
+    max-width: 300px;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pn-personal-finance-manager-statistics-panel {
+    padding: 10px;
+  }
+
+  .pn-personal-finance-manager-statistics-chart-wrapper {
+    max-width: 250px;
+    max-height: 200px;
+  }
+}
