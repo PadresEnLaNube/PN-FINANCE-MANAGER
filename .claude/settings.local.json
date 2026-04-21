@@ -32,7 +32,8 @@
       "Bash(python -c:*)",
       "WebFetch(domain:leafletjs.com)",
       "WebFetch(domain:www.npmjs.com)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(dir:*)"
     ]
   }
 }

@@ -1098,6 +1098,100 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
         exit;
         break;
 
+      case 'pn_pfm_create_plugin_page':
+        if (!current_user_can('manage_options')) {
+          echo wp_json_encode([
+            'success' => false,
+            'message' => esc_html(__('You do not have permission to create pages.', 'pn-personal-finance-manager')),
+          ]);
+          exit;
+        }
+
+        $page_title = !empty($_POST['page_title']) ? sanitize_text_field(wp_unslash($_POST['page_title'])) : '';
+        $shortcode = !empty($_POST['shortcode']) ? sanitize_text_field(wp_unslash($_POST['shortcode'])) : '';
+        $page_option = !empty($_POST['page_option']) ? sanitize_key(wp_unslash($_POST['page_option'])) : '';
+
+        if (empty($page_title) || empty($shortcode) || empty($page_option)) {
+          echo wp_json_encode([
+            'success' => false,
+            'message' => esc_html(__('Missing required fields.', 'pn-personal-finance-manager')),
+          ]);
+          exit;
+        }
+
+        $allowed_options = array_keys(PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_auto_detect_pages(
+          method_exists('PN_PERSONAL_FINANCE_MANAGER_Settings', 'pn_personal_finance_manager_get_managed_pages')
+            ? PN_PERSONAL_FINANCE_MANAGER_Settings::pn_personal_finance_manager_get_managed_pages()
+            : []
+        ));
+        if (empty($allowed_options)) {
+          $allowed_options = [$page_option];
+        }
+        if (!in_array($page_option, $allowed_options, true) && strpos($page_option, 'pn_personal_finance_manager_') !== 0) {
+          echo wp_json_encode([
+            'success' => false,
+            'message' => esc_html(__('Invalid page option.', 'pn-personal-finance-manager')),
+          ]);
+          exit;
+        }
+
+        $post_content = '[' . $shortcode . ']';
+        $post_id = wp_insert_post([
+          'post_title'   => $page_title,
+          'post_content' => $post_content,
+          'post_status'  => 'publish',
+          'post_type'    => 'page',
+        ]);
+
+        if (is_wp_error($post_id)) {
+          echo wp_json_encode([
+            'success' => false,
+            'message' => esc_html($post_id->get_error_message()),
+          ]);
+          exit;
+        }
+
+        update_option($page_option, $post_id);
+
+        echo wp_json_encode([
+          'success'    => true,
+          'message'    => esc_html(__('Page created successfully.', 'pn-personal-finance-manager')),
+          'page_id'    => $post_id,
+          'page_title' => esc_html($page_title),
+          'page_url'   => esc_url(get_permalink($post_id)),
+          'edit_url'   => esc_url(get_edit_post_link($post_id, 'raw')),
+        ]);
+        exit;
+        break;
+
+      case 'pn_pfm_unlink_plugin_page':
+        if (!current_user_can('manage_options')) {
+          echo wp_json_encode([
+            'success' => false,
+            'message' => esc_html(__('You do not have permission to manage pages.', 'pn-personal-finance-manager')),
+          ]);
+          exit;
+        }
+
+        $page_option = !empty($_POST['page_option']) ? sanitize_key(wp_unslash($_POST['page_option'])) : '';
+
+        if (empty($page_option) || strpos($page_option, 'pn_personal_finance_manager_') !== 0) {
+          echo wp_json_encode([
+            'success' => false,
+            'message' => esc_html(__('Invalid page option.', 'pn-personal-finance-manager')),
+          ]);
+          exit;
+        }
+
+        delete_option($page_option);
+
+        echo wp_json_encode([
+          'success' => true,
+          'message' => esc_html(__('Page unlinked successfully.', 'pn-personal-finance-manager')),
+        ]);
+        exit;
+        break;
+
       case 'pn_personal_finance_manager_amortization_table':
         if (!is_user_logged_in()) {
           echo wp_json_encode(['success' => false, 'error' => esc_html__('You must be logged in.', 'pn-personal-finance-manager')]);

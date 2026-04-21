@@ -647,6 +647,43 @@ class PN_PERSONAL_FINANCE_MANAGER_Forms {
         </div>
         <?php
         break;
+      case 'page_manager':
+        if (!current_user_can('manage_options')) {
+          ?><div class="pn-personal-finance-manager-field"><p class="pn-personal-finance-manager-color-error"><?php esc_html_e('You do not have permission to manage plugin pages.', 'pn-personal-finance-manager'); ?></p></div><?php
+          break;
+        }
+        $page_option = isset($pn_personal_finance_manager_input['page_option']) ? $pn_personal_finance_manager_input['page_option'] : '';
+        $shortcode_name = isset($pn_personal_finance_manager_input['shortcode']) ? $pn_personal_finance_manager_input['shortcode'] : '';
+        $page_id = !empty($page_option) ? intval(get_option($page_option)) : 0;
+        $page = $page_id ? get_post($page_id) : null;
+        $page_exists = $page && $page->post_status !== 'trash';
+        ?>
+        <div class="pn-personal-finance-manager-page-manager-wrapper" data-page-option="<?php echo esc_attr($page_option); ?>" data-shortcode="<?php echo esc_attr($shortcode_name); ?>">
+          <?php if ($page_exists): ?>
+            <div class="pn-personal-finance-manager-page-manager-info">
+              <div class="pn-personal-finance-manager-page-manager-status pn-personal-finance-manager-mb-10">
+                <i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle pn-personal-finance-manager-color-green">check</i>
+                <strong><?php echo esc_html($page->post_title); ?></strong>
+                <span class="pn-personal-finance-manager-page-manager-badge pn-personal-finance-manager-ml-10"><?php echo esc_html(ucfirst($page->post_status)); ?></span>
+              </div>
+              <div class="pn-personal-finance-manager-page-manager-actions">
+                <a href="<?php echo esc_url(get_permalink($page_id)); ?>" target="_blank" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-mr-20"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">visibility</i> <?php esc_html_e('View', 'pn-personal-finance-manager'); ?></a>
+                <a href="<?php echo esc_url(get_edit_post_link($page_id)); ?>" target="_blank" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-mr-20"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">edit</i> <?php esc_html_e('Edit', 'pn-personal-finance-manager'); ?></a>
+                <button type="button" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-page-manager-unlink-btn"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">link_off</i> <?php esc_html_e('Unlink', 'pn-personal-finance-manager'); ?></button>
+              </div>
+            </div>
+          <?php else: ?>
+            <div class="pn-personal-finance-manager-page-manager-create">
+              <div class="pn-personal-finance-manager-page-manager-create-form">
+                <input type="text" class="pn-personal-finance-manager-input pn-personal-finance-manager-page-manager-title-input pn-personal-finance-manager-width-100-percent pn-personal-finance-manager-mb-10" placeholder="<?php esc_attr_e('Page title', 'pn-personal-finance-manager'); ?>" value="<?php echo esc_attr(isset($pn_personal_finance_manager_input['label']) ? $pn_personal_finance_manager_input['label'] : ''); ?>">
+                <button type="button" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-page-manager-create-btn"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">add_circle</i> <?php esc_html_e('Create page', 'pn-personal-finance-manager'); ?></button>
+              </div>
+            </div>
+          <?php endif; ?>
+          <div class="pn-personal-finance-manager-page-manager-message pn-personal-finance-manager-mt-10 pn-personal-finance-manager-display-none-soft"></div>
+        </div>
+        <?php
+        break;
     }
   }
 
@@ -968,12 +1005,116 @@ class PN_PERSONAL_FINANCE_MANAGER_Forms {
   public static function pn_personal_finance_manager_sanitizer($value, $node = '', $type = '', $field_config = []) {
     // Use the new validation system
     $result = PN_PERSONAL_FINANCE_MANAGER_Validation::pn_personal_finance_manager_validate_and_sanitize($value, $node, $type, $field_config);
-    
+
     // If validation failed, return empty value and log the error
     if (is_wp_error($result)) {
         return '';
     }
-    
+
     return $result;
+  }
+
+  /**
+   * Scan published / draft / private pages looking for a specific shortcode or
+   * Gutenberg block.
+   *
+   * @param string|null $shortcode Shortcode tag (without brackets).
+   * @param string|null $block     Optional block name.
+   * @return int|false  Page ID on success, false when not found.
+   */
+  public static function pn_personal_finance_manager_find_page_by_content($shortcode = null, $block = null) {
+    $pages = get_posts([
+      'post_type'   => 'page',
+      'post_status' => ['publish', 'draft', 'private'],
+      'numberposts' => -1,
+      'fields'      => 'ids',
+    ]);
+
+    foreach ($pages as $page_id) {
+      $content = get_post_field('post_content', $page_id);
+
+      if (!empty($shortcode) && has_shortcode($content, $shortcode)) {
+        return $page_id;
+      }
+
+      if ($block && strpos($content, '<!-- wp:' . $block) !== false) {
+        return $page_id;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * For every managed-page entry whose option is empty or points to a trashed
+   * page, try to auto-detect the page by scanning site content.
+   *
+   * @param array $managed_pages Associative array keyed by option name.
+   * @return array Subset of $managed_pages that could NOT be auto-detected.
+   */
+  public static function pn_personal_finance_manager_auto_detect_pages($managed_pages) {
+    $missing = [];
+
+    foreach ($managed_pages as $option_key => $cfg) {
+      $current = get_option($option_key);
+
+      if ($current) {
+        $page = get_post(intval($current));
+        if ($page && $page->post_status !== 'trash') {
+          continue;
+        }
+      }
+
+      $shortcode = isset($cfg['shortcode']) ? $cfg['shortcode'] : null;
+      $block = isset($cfg['block']) ? $cfg['block'] : null;
+      $found = self::pn_personal_finance_manager_find_page_by_content($shortcode, $block);
+
+      if ($found) {
+        update_option($option_key, $found);
+      } else {
+        $missing[$option_key] = $cfg;
+      }
+    }
+
+    return $missing;
+  }
+
+  /**
+   * Render an alert block for every managed page that has not been detected.
+   *
+   * @param array $managed_pages Same format accepted by auto_detect_pages().
+   */
+  public static function pn_personal_finance_manager_page_manager_alerts($managed_pages) {
+    $missing = self::pn_personal_finance_manager_auto_detect_pages($managed_pages);
+
+    if (empty($missing)) {
+      return;
+    }
+    ?>
+    <div class="pn-personal-finance-manager-options-fields pn-personal-finance-manager-mb-30">
+      <div class="pn-personal-finance-manager-p-30">
+        <p class="pn-personal-finance-manager-mb-15">
+          <i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">warning</i>
+          <?php esc_html_e('The following plugin pages have not been detected. You can create them below or assign them manually in the Pages section.', 'pn-personal-finance-manager'); ?>
+        </p>
+        <?php foreach ($missing as $option_key => $cfg):
+          $label = isset($cfg['label']) ? $cfg['label'] : '';
+        ?>
+          <div class="pn-personal-finance-manager-mb-15">
+            <h4 class="pn-personal-finance-manager-mb-5"><?php echo esc_html($label); ?></h4>
+            <?php
+            self::pn_personal_finance_manager_input_builder([
+              'id'          => $option_key,
+              'input'       => 'page_manager',
+              'label'       => $label,
+              'shortcode'   => isset($cfg['shortcode']) ? $cfg['shortcode'] : '',
+              'page_option' => $option_key,
+            ], 'option');
+            ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <?php
   }
 }

@@ -66,7 +66,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Functions_Attachment {
     ];
 
     $attach_id = wp_insert_attachment($post_info, $file_path, $parent_post_id);
-    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+    wp_generate_attachment_metadata($attach_id, $file_path);
 
     return $attach_id;
   }

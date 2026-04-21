@@ -495,4 +495,123 @@
     e.preventDefault();
     pn_personal_finance_manager_handle_role_action('remove', $(this));
   });
+  // PAGE MANAGER: Create page
+  $(document).on('click', '.pn-personal-finance-manager-page-manager-create-btn', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    var $btn = $(this), $wrapper = $btn.closest('.pn-personal-finance-manager-page-manager-wrapper');
+    var $input = $wrapper.find('.pn-personal-finance-manager-page-manager-title-input');
+    var $message = $wrapper.find('.pn-personal-finance-manager-page-manager-message');
+    var pageTitle = $input.val().trim();
+    var shortcode = $wrapper.data('shortcode');
+    var pageOption = $wrapper.data('page-option');
+
+    if (!pageTitle) {
+      $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">Please enter a page title.</p>');
+      setTimeout(function () { $message.addClass('pn-personal-finance-manager-display-none-soft'); }, 4000);
+      return;
+    }
+
+    $btn.prop('disabled', true);
+    $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p>Creating page\u2026</p>');
+
+    $.ajax({
+      url: pn_personal_finance_manager_ajax.ajax_url, type: 'POST',
+      data: {
+        action: 'pn_personal_finance_manager_ajax',
+        pn_personal_finance_manager_ajax_type: 'pn_pfm_create_plugin_page',
+        pn_personal_finance_manager_ajax_nonce: $('#pn_personal_finance_manager_nonce').val(),
+        page_title: pageTitle,
+        shortcode: shortcode,
+        page_option: pageOption
+      },
+      dataType: 'json',
+      success: function (response) {
+        try {
+          var data = typeof response === 'string' ? JSON.parse(response) : response;
+          if (data.success) {
+            $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-green">' + data.message + '</p>');
+            $wrapper.find('.pn-personal-finance-manager-page-manager-create').replaceWith(
+              '<div class="pn-personal-finance-manager-page-manager-info">' +
+                '<div class="pn-personal-finance-manager-page-manager-status pn-personal-finance-manager-mb-10">' +
+                  '<i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle pn-personal-finance-manager-color-green">check</i> ' +
+                  '<strong>' + data.page_title + '</strong>' +
+                  '<span class="pn-personal-finance-manager-page-manager-badge pn-personal-finance-manager-ml-10">Publish</span>' +
+                '</div>' +
+                '<div class="pn-personal-finance-manager-page-manager-actions">' +
+                  '<a href="' + data.page_url + '" target="_blank" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-mr-20"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">visibility</i> View</a>' +
+                  '<a href="' + data.edit_url + '" target="_blank" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-mr-20"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">edit</i> Edit</a>' +
+                  '<button type="button" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-page-manager-unlink-btn"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">link_off</i> Unlink</button>' +
+                '</div>' +
+              '</div>'
+            );
+          } else {
+            $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">' + (data.message || 'An error occurred.') + '</p>');
+          }
+        } catch (err) {
+          $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">Error parsing server response.</p>');
+        }
+      },
+      error: function () {
+        $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">Connection error. Please try again.</p>');
+      },
+      complete: function () { $btn.prop('disabled', false); }
+    });
+  });
+
+  // PAGE MANAGER: Unlink page
+  $(document).on('click', '.pn-personal-finance-manager-page-manager-unlink-btn', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    var $btn = $(this), $wrapper = $btn.closest('.pn-personal-finance-manager-page-manager-wrapper');
+    var $message = $wrapper.find('.pn-personal-finance-manager-page-manager-message');
+    var pageOption = $wrapper.data('page-option');
+    var label = $wrapper.closest('.pn-personal-finance-manager-input-wrapper').find('label').first().text().trim();
+
+    if (!confirm('Are you sure you want to unlink this page? The page will not be deleted.')) return;
+
+    $btn.prop('disabled', true);
+    $.ajax({
+      url: pn_personal_finance_manager_ajax.ajax_url, type: 'POST',
+      data: {
+        action: 'pn_personal_finance_manager_ajax',
+        pn_personal_finance_manager_ajax_type: 'pn_pfm_unlink_plugin_page',
+        pn_personal_finance_manager_ajax_nonce: $('#pn_personal_finance_manager_nonce').val(),
+        page_option: pageOption
+      },
+      dataType: 'json',
+      success: function (response) {
+        try {
+          var data = typeof response === 'string' ? JSON.parse(response) : response;
+          if (data.success) {
+            $wrapper.find('.pn-personal-finance-manager-page-manager-info').replaceWith(
+              '<div class="pn-personal-finance-manager-page-manager-create">' +
+                '<div class="pn-personal-finance-manager-page-manager-create-form">' +
+                  '<input type="text" class="pn-personal-finance-manager-input pn-personal-finance-manager-page-manager-title-input pn-personal-finance-manager-width-100-percent pn-personal-finance-manager-mb-10" placeholder="Page title" value="' + label + '">' +
+                  '<button type="button" class="pn-personal-finance-manager-btn pn-personal-finance-manager-btn-mini pn-personal-finance-manager-btn-transparent pn-personal-finance-manager-page-manager-create-btn"><i class="material-icons-outlined pn-personal-finance-manager-vertical-align-middle">add_circle</i> Create page</button>' +
+                '</div>' +
+              '</div>'
+            );
+            $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-green">Page unlinked.</p>');
+            setTimeout(function () { $message.addClass('pn-personal-finance-manager-display-none-soft'); }, 3000);
+          } else {
+            $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">' + (data.message || 'Error unlinking page.') + '</p>');
+          }
+        } catch (err) {
+          $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">Error parsing server response.</p>');
+        }
+      },
+      error: function () {
+        $message.removeClass('pn-personal-finance-manager-display-none-soft').html('<p class="pn-personal-finance-manager-color-red">Connection error. Please try again.</p>');
+      },
+      complete: function () { $btn.prop('disabled', false); }
+    });
+  });
+
+  // PAGE MANAGER: Enter key on title input triggers create
+  $(document).on('keypress', '.pn-personal-finance-manager-page-manager-title-input', function (e) {
+    if (e.which === 13) {
+      e.preventDefault();
+      $(this).siblings('.pn-personal-finance-manager-page-manager-create-btn').click();
+    }
+  });
+
 })(jQuery);
