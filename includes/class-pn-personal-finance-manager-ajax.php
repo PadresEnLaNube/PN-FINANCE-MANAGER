@@ -21,8 +21,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
     require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-pn-personal-finance-manager-watchlist.php';
     require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-pn-personal-finance-manager-export-import.php';
 
-    error_log('PnPersonalFinanceManager Debug: AJAX class instantiated');
-
     // Add AJAX actions for both logged in and non-logged in users
     add_action('wp_ajax_pn_personal_finance_manager_ajax', array($this, 'pn_personal_finance_manager_ajax_server'));
     add_action('wp_ajax_nopriv_pn_personal_finance_manager_ajax', array($this, 'pn_personal_finance_manager_ajax_server'));
@@ -37,32 +35,30 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
    * @since    1.0.0
    */
   public function pn_personal_finance_manager_ajax_server() {
-    error_log('PnPersonalFinanceManager Debug: AJAX server function called');
-    error_log('PnPersonalFinanceManager Debug: POST data: ' . print_r($_POST, true));
-    
     // Verify nonce
     if (!isset($_POST['pn_personal_finance_manager_ajax_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_ajax_nonce'])), 'pn-personal-finance-manager-nonce')) {
-      error_log('PnPersonalFinanceManager Debug: Nonce verification failed');
       echo wp_json_encode(['success' => false, 'error' => 'Nonce verification failed']);
       exit;
     }
-    
-    error_log('PnPersonalFinanceManager Debug: Nonce verification passed');
-    
+
     $pn_personal_finance_manager_ajax_type = !empty($_POST['pn_personal_finance_manager_ajax_type']) ? sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_ajax_type'])) : '';
-    error_log('PnPersonalFinanceManager Debug: AJAX type: ' . $pn_personal_finance_manager_ajax_type);
 
-    $pn_personal_finance_manager_ajax_keys = !empty($_POST['pn_personal_finance_manager_ajax_keys']) ? array_map(function($key) {
-      return array(
-        'id' => sanitize_key($key['id']),
-        'node' => sanitize_key($key['node']),
-        'type' => sanitize_key($key['type']),
-        'field_config' => !empty($key['field_config']) ? array_map('sanitize_text_field', $key['field_config']) : []
-      );
-    }, wp_unslash($_POST['pn_personal_finance_manager_ajax_keys'])) : [];
+    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- each element is sanitized individually below
+    $pn_personal_finance_manager_ajax_keys_raw = !empty($_POST['pn_personal_finance_manager_ajax_keys']) ? wp_unslash($_POST['pn_personal_finance_manager_ajax_keys']) : [];
+    $pn_personal_finance_manager_ajax_keys = [];
+    if (is_array($pn_personal_finance_manager_ajax_keys_raw)) {
+      foreach ($pn_personal_finance_manager_ajax_keys_raw as $key) {
+        $pn_personal_finance_manager_ajax_keys[] = [
+          'id' => isset($key['id']) ? sanitize_key($key['id']) : '',
+          'node' => isset($key['node']) ? sanitize_key($key['node']) : '',
+          'type' => isset($key['type']) ? sanitize_key($key['type']) : '',
+          'field_config' => !empty($key['field_config']) && is_array($key['field_config']) ? array_map('sanitize_text_field', $key['field_config']) : [],
+        ];
+      }
+    }
 
-    $pn_personal_finance_manager_asset_id = !empty($_POST['pn_personal_finance_manager_asset_id']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_asset_id'])) : 0;
-    $pn_personal_finance_manager_liability_id = !empty($_POST['pn_personal_finance_manager_liability_id']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_liability_id'])) : 0;
+    $pn_personal_finance_manager_asset_id = !empty($_POST['pn_personal_finance_manager_asset_id']) ? absint($_POST['pn_personal_finance_manager_asset_id']) : 0;
+    $pn_personal_finance_manager_liability_id = !empty($_POST['pn_personal_finance_manager_liability_id']) ? absint($_POST['pn_personal_finance_manager_liability_id']) : 0;
     
     $pn_personal_finance_manager_key_value = [];
 
@@ -73,15 +69,14 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
           ${$pn_personal_finance_manager_clear_key} = $pn_personal_finance_manager_key_value[$pn_personal_finance_manager_clear_key] = [];
 
           if (!empty($_POST[$pn_personal_finance_manager_clear_key])) {
-            $unslashed_array = wp_unslash($_POST[$pn_personal_finance_manager_clear_key]);
             $sanitized_array = array_map(function($value) use ($pn_personal_finance_manager_key) {
               return PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(
-                $value,
+                sanitize_text_field($value),
                 $pn_personal_finance_manager_key['node'],
                 $pn_personal_finance_manager_key['type'],
                 $pn_personal_finance_manager_key['field_config']
               );
-            }, $unslashed_array);
+            }, wp_unslash((array) $_POST[$pn_personal_finance_manager_clear_key]));
             
             foreach ($sanitized_array as $multi_key => $multi_value) {
               $final_value = !empty($multi_value) ? $multi_value : '';
@@ -93,10 +88,10 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
           }
         } else {
           $sanitized_key = sanitize_key($pn_personal_finance_manager_key['id']);
-          $pn_personal_finance_manager_key_id = !empty($_POST[$sanitized_key]) ? 
+          $pn_personal_finance_manager_key_id = !empty($_POST[$sanitized_key]) ?
             PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(
-              wp_unslash($_POST[$sanitized_key]), 
-              $pn_personal_finance_manager_key['node'], 
+              sanitize_text_field(wp_unslash($_POST[$sanitized_key])),
+              $pn_personal_finance_manager_key['node'],
               $pn_personal_finance_manager_key['type'],
               $pn_personal_finance_manager_key['field_config']
             ) : '';
@@ -319,14 +314,9 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
         break;
       // Stock AJAX cases
       case 'pn_personal_finance_manager_get_stock_symbols':
-        error_log('PnPersonalFinanceManager Debug: pn_personal_finance_manager_get_stock_symbols AJAX called');
-        
         $plugin_stocks = new PN_PERSONAL_FINANCE_MANAGER_Stocks();
-        error_log('PnPersonalFinanceManager Debug: Stocks class instantiated');
-        
         $symbols = $plugin_stocks->pn_personal_finance_manager_get_stock_symbols_for_form();
-        error_log('PnPersonalFinanceManager Debug: Symbols returned: ' . print_r($symbols, true));
-        
+
         // Convert to format expected by JavaScript
         $symbols_data = [];
         foreach ($symbols as $symbol => $name) {
@@ -337,16 +327,11 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
             ];
           }
         }
-        
-        error_log('PnPersonalFinanceManager Debug: Symbols data for JS: ' . print_r($symbols_data, true));
-        
-        $response = [
+
+        echo wp_json_encode([
           'success' => true,
           'data' => $symbols_data
-        ];
-        
-        error_log('PnPersonalFinanceManager Debug: Sending response: ' . print_r($response, true));
-        echo wp_json_encode($response);
+        ]);
         
         exit;
         break;
@@ -1229,8 +1214,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
    * @since    1.0.0
    */
   public function pn_personal_finance_manager_check_api_status_handler() {
-    error_log('PnPersonalFinanceManager Debug: API status check requested');
-    
     // Check nonce for security
     if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'pn_personal_finance_manager_nonce')) {
       wp_die('Security check failed');
@@ -1253,8 +1236,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax {
    * @since    1.0.0
    */
   public function pn_personal_finance_manager_manual_stock_update_handler() {
-    error_log('PnPersonalFinanceManager Debug: Manual stock update requested');
-    
     // Check nonce for security
     if (!isset($_POST['pn_personal_finance_manager_ajax_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_ajax_nonce'])), 'pn-personal-finance-manager-nonce')) {
       wp_send_json_error(['error' => 'Security check failed.']);

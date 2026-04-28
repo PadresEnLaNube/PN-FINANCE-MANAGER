@@ -1407,61 +1407,16 @@ header .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigati
 }
 /* END LOADER CIRCLE */
 
-/* OWL CAROUSEL */
-  .pn-personal-finance-manager-carousel .owl-nav{
-    position:absolute;
-    top:23%;
-    width:100%;
+/* IMAGE GALLERY */
+  .pn-personal-finance-manager-carousel-main-images{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
   }
-  .pn-personal-finance-manager-carousel .owl-nav .owl-prev{
-    position:absolute;
-    left:-50px;
+  .pn-personal-finance-manager-carousel-main-images .pn-personal-finance-manager-image{
+    flex:0 0 auto;
   }
-  .pn-personal-finance-manager-carousel .owl-nav .owl-next{
-    position:absolute;
-    right:-50px;
-  }
-  .pn-personal-finance-manager-carousel .owl-nav i{
-    font-size:50px;
-  }
-  .pn-personal-finance-manager-carousel .owl-dots{
-    margin-top:30px;
-  }
-  .pn-personal-finance-manager-carousel .owl-item{
-    cursor:grab;
-  }
-  .pn-personal-finance-manager-carousel .owl-dots{
-    -webkit-tap-highlight-color:transparent;
-    text-align:center;
-    margin-top:20px;
-  }
-  .pn-personal-finance-manager-carousel .owl-dot{
-    display:inline-block;
-     zoom:1;
-  }
-  .pn-personal-finance-manager-carousel .owl-dot span{
-    width:10px;
-    height:10px;
-    margin:5px 7px;
-    background:#d6d6d6;
-    display:block;
-    -webkit-backface-visibility:visible;
-    transition:opacity .2s ease;
-    border-radius:30px;
-  }
-  .pn-personal-finance-manager-carousel .owl-dots .owl-dot.active span,.pn-personal-finance-manager-carousel .owl-dots .owl-dot:hover span{
-    background-color:#585f62;
-  }
-
-  @media all and (max-width:768px){
-    .pn-personal-finance-manager-carousel .owl-nav button.owl-prev{
-      left:-40px;
-    }
-    .pn-personal-finance-manager-carousel .owl-nav button.owl-next{
-      right:-40px;
-    }
-  }
-/* END OWL CAROUSEL */
+/* END IMAGE GALLERY */
 
 /* pn-personal-finance-manager FORMS */
   .pn-personal-finance-manager-section-info-block{

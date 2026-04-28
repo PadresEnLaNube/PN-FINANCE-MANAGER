@@ -665,10 +665,11 @@ class PN_PERSONAL_FINANCE_MANAGER_Post_Type_Liability {
                   if (array_key_exists('multiple', $field) && $field['multiple']) {
                     $multi_array = [];
                     $empty = true;
-                    foreach (wp_unslash($_POST[$field['id']]) as $multi_value) {
+                    $unslashed_multi = isset($_POST[$field['id']]) ? wp_unslash($_POST[$field['id']]) : [];
+                    foreach ((array) $unslashed_multi as $multi_value) {
                       $multi_array[] = PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(
-                        $multi_value, 
-                        $field['input'], 
+                        sanitize_text_field($multi_value),
+                        $field['input'],
                         !empty($field['type']) ? $field['type'] : '',
                         $field
                       );
@@ -683,8 +684,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Post_Type_Liability {
                     if (array_key_exists($multi_field['id'], $_POST)) {
                       $multi_array = [];
                       $empty = true;
-                      $sanitized_post_data = isset($_POST[$multi_field['id']]) ? 
-                        array_map(function($v) { return sanitize_text_field(wp_unslash($v)); }, (array)$_POST[$multi_field['id']]) : [];
+                      $sanitized_post_data = isset($_POST[$multi_field['id']]) ?
+                        array_map('sanitize_text_field', wp_unslash((array) $_POST[$multi_field['id']])) : [];
                       foreach ($sanitized_post_data as $multi_value) {
                         if (!empty($multi_value)) {
                           $empty = false;

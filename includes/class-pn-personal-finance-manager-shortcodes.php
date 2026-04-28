@@ -115,8 +115,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Shortcodes {
 		$requested_user_id = intval($atts['user_id']);
 		
 		if ($current_user_id !== $requested_user_id && !current_user_can('manage_options')) {
-			return '<div class="pn-personal-finance-manager-user-assets-error">' . 
-				   '<p>' . __('You do not have permission to view these assets.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-user-assets-error">' .
+				   '<p>' . esc_html__('You do not have permission to view these assets.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 		
@@ -144,11 +144,11 @@ class PN_PERSONAL_FINANCE_MANAGER_Shortcodes {
 		$user_assets = $stocks->pn_personal_finance_manager_get_user_assets($user_id);
 		
 		if (empty($user_assets)) {
-			return '<div class="pn-personal-finance-manager-user-assets-empty">' . 
-				   '<p>' . __('No assets found.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-user-assets-empty">' .
+				   '<p>' . esc_html__('No assets found.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
-		
+
 		$total_portfolio_value = 0;
 		$total_profit_loss = 0;
 		$total_assets = 0;
@@ -211,8 +211,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Shortcodes {
 		$user_assets = $stocks->pn_personal_finance_manager_get_user_assets($user_id);
 		
 		if (empty($user_assets) || !isset($user_assets['stocks'])) {
-			return '<div class="pn-personal-finance-manager-user-assets-empty">' . 
-				   '<p>' . __('No stock assets found for this user.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-user-assets-empty">' .
+				   '<p>' . esc_html__('No stock assets found for this user.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 		
@@ -376,32 +376,32 @@ PNPFM_JS;
 		$days = intval($atts['days']);
 		
 		if (!$asset_id) {
-			return '<div class="pn-personal-finance-manager-stock-performance-error">' . 
-				   '<p>' . __('Asset ID is required.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-stock-performance-error">' .
+				   '<p>' . esc_html__('Asset ID is required.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 		
 		// Get asset data
 		$asset = get_post($asset_id);
 		if (!$asset || $asset->post_type !== 'pnpfm_asset') {
-			return '<div class="pn-personal-finance-manager-stock-performance-error">' . 
-				   '<p>' . __('Asset not found.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-stock-performance-error">' .
+				   '<p>' . esc_html__('Asset not found.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 		
 		// Check if it's a stock asset
 		$asset_type = get_post_meta($asset_id, 'pn_personal_finance_manager_asset_type', true);
 		if ($asset_type !== 'stocks') {
-			return '<div class="pn-personal-finance-manager-stock-performance-error">' . 
-				   '<p>' . __('This asset is not a stock.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-stock-performance-error">' .
+				   '<p>' . esc_html__('This asset is not a stock.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 		
 		// Get stock symbol
 		$symbol = get_post_meta($asset_id, 'pn_personal_finance_manager_stock_symbol', true);
 		if (empty($symbol)) {
-			return '<div class="pn-personal-finance-manager-stock-performance-error">' . 
-				   '<p>' . __('No stock symbol found for this asset.', 'pn-personal-finance-manager') . '</p>' .
+			return '<div class="pn-personal-finance-manager-stock-performance-error">' .
+				   '<p>' . esc_html__('No stock symbol found for this asset.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 		

@@ -51,8 +51,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Common {
 	 * @since    1.0.0
 	 */
 	public function pn_personal_finance_manager_enqueue_styles() {
-		if (!wp_style_is('wph-material-icons-outlined', 'enqueued')) {
-			wp_enqueue_style('wph-material-icons-outlined', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/material-icons-outlined.min.css', [], $this->version, 'all');
+		if (!wp_style_is('pn-personal-finance-manager-material-icons', 'enqueued')) {
+			wp_enqueue_style('pn-personal-finance-manager-material-icons', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/material-icons-outlined.min.css', [], $this->version, 'all');
 		}
 
 		if (!wp_style_is($this->plugin_name . '-popups', 'enqueued')) {
@@ -63,16 +63,12 @@ class PN_PERSONAL_FINANCE_MANAGER_Common {
 				wp_enqueue_style($this->plugin_name . '-selector', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/pn-personal-finance-manager-selector.css', [], $this->version, 'all');
 		}
 
-		if (!wp_style_is('wph-trumbowyg', 'enqueued')) {
-				wp_enqueue_style('wph-trumbowyg', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/trumbowyg.min.css', [], $this->version, 'all');
+		if (!wp_style_is('pn-personal-finance-manager-trumbowyg', 'enqueued')) {
+				wp_enqueue_style('pn-personal-finance-manager-trumbowyg', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/trumbowyg.min.css', [], $this->version, 'all');
 		}
 
 		if (!wp_style_is('pn-personal-finance-manager-tooltips', 'enqueued')) {
 				wp_enqueue_style('pn-personal-finance-manager-tooltips', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/pn-personal-finance-manager-tooltips.css', [], $this->version, 'all');
-		}
-
-		if (!wp_style_is('wph-owl', 'enqueued')) {
-				wp_enqueue_style('wph-owl', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/css/owl.min.css', [], $this->version, 'all');
 		}
 
 		if (!wp_style_is($this->plugin_name . '-stocks', 'enqueued')) {
@@ -113,17 +109,15 @@ class PN_PERSONAL_FINANCE_MANAGER_Common {
 	 * @since    1.0.0
 	 */
 	public function pn_personal_finance_manager_enqueue_scripts() {
-		error_log('PnPersonalFinanceManager Debug: Common enqueue_scripts called');
-		
     if(!wp_script_is('jquery-ui-sortable', 'enqueued')) {
 			wp_enqueue_script('jquery-ui-sortable');
     }
 
-    if(!wp_script_is('wph-trumbowyg', 'enqueued')) {
-			wp_enqueue_script('wph-trumbowyg', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/trumbowyg.min.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
+    if(!wp_script_is('pn-personal-finance-manager-trumbowyg', 'enqueued')) {
+			wp_enqueue_script('pn-personal-finance-manager-trumbowyg', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/trumbowyg.min.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
     }
 
-		wp_localize_script('wph-trumbowyg', 'pn_personal_finance_manager_trumbowyg', [
+		wp_localize_script('pn-personal-finance-manager-trumbowyg', 'pn_personal_finance_manager_trumbowyg', [
 			'path' => PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/media/trumbowyg-icons.svg',
 		]);
 
@@ -139,16 +133,11 @@ class PN_PERSONAL_FINANCE_MANAGER_Common {
 			wp_enqueue_script('pn-personal-finance-manager-tooltips', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-tooltips.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
     }
 
-    if(!wp_script_is('wph-owl', 'enqueued')) {
-			wp_enqueue_script('wph-owl', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/owl.min.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
-    }
-
 		wp_enqueue_script($this->plugin_name, PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
 		wp_enqueue_script($this->plugin_name . '-aux', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-aux.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
 		wp_enqueue_script($this->plugin_name . '-forms', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-forms.js', ['jquery', 'jquery-ui-sortable'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
 		wp_enqueue_script($this->plugin_name . '-ajax', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-ajax.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
 		
-		error_log('PnPersonalFinanceManager Debug: Loading stocks script in common: ' . PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-stocks.js');
 		wp_enqueue_script($this->plugin_name . '-stocks', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-stocks.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
 
 		wp_enqueue_script('pn-personal-finance-manager-chartjs', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/chart.min.js', [], '4.5.1', true);
@@ -346,10 +335,10 @@ class PN_PERSONAL_FINANCE_MANAGER_Common {
 		$pn_personal_finance_manager_tab = '';
 
 		if ($nonce_verified) {
-			$pn_personal_finance_manager_action = !empty($_GET['pn_personal_finance_manager_action']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_GET['pn_personal_finance_manager_action'])) : '';
-			$pn_personal_finance_manager_btn_id = !empty($_GET['pn_personal_finance_manager_btn_id']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_GET['pn_personal_finance_manager_btn_id'])) : '';
-			$pn_personal_finance_manager_popup = !empty($_GET['pn_personal_finance_manager_popup']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_GET['pn_personal_finance_manager_popup'])) : '';
-			$pn_personal_finance_manager_tab = !empty($_GET['pn_personal_finance_manager_tab']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_GET['pn_personal_finance_manager_tab'])) : '';
+			$pn_personal_finance_manager_action = !empty($_GET['pn_personal_finance_manager_action']) ? sanitize_text_field(wp_unslash($_GET['pn_personal_finance_manager_action'])) : '';
+			$pn_personal_finance_manager_btn_id = !empty($_GET['pn_personal_finance_manager_btn_id']) ? sanitize_text_field(wp_unslash($_GET['pn_personal_finance_manager_btn_id'])) : '';
+			$pn_personal_finance_manager_popup = !empty($_GET['pn_personal_finance_manager_popup']) ? sanitize_text_field(wp_unslash($_GET['pn_personal_finance_manager_popup'])) : '';
+			$pn_personal_finance_manager_tab = !empty($_GET['pn_personal_finance_manager_tab']) ? sanitize_text_field(wp_unslash($_GET['pn_personal_finance_manager_tab'])) : '';
 		}
 
 		wp_localize_script($this->plugin_name, 'pn_personal_finance_manager_path', [

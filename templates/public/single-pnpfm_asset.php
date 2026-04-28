@@ -78,23 +78,18 @@
 
 					<?php if (!empty($pn_personal_finance_manager_images)): ?>
 						<div class="pn-personal-finance-manager-carousel pn-personal-finance-manager-carousel-main-images">
-			        <div class="owl-carousel owl-theme">
-			          <?php if (!empty($pn_personal_finance_manager_images)): ?>
-			          	<?php if (has_post_thumbnail($post_id)): ?>
-				          	<div class="pn-personal-finance-manager-image pn-personal-finance-manager-cursor-grab">
-			                <?php echo get_the_post_thumbnail($post_id, 'thumbnail', ['class' => 'pn-personal-finance-manager-border-radius-10']); ?>  
-			              </div>
-								  <?php endif ?>
-
+			          <?php if (has_post_thumbnail($post_id)): ?>
+			          	<div class="pn-personal-finance-manager-image">
+		                <?php echo get_the_post_thumbnail($post_id, 'thumbnail', ['class' => 'pn-personal-finance-manager-border-radius-10']); ?>
+		              </div>
+							  <?php endif ?>
 			            <?php foreach ($pn_personal_finance_manager_images as $image_id): ?>
 		              	<?php if (!empty($image_id)): ?>
-			              	<div class="pn-personal-finance-manager-image pn-personal-finance-manager-cursor-grab">
-			                	<?php echo wp_get_attachment_image($image_id, 'thumbnail', false, ['class' => 'pn-personal-finance-manager-border-radius-10']); ?>  
+			              	<div class="pn-personal-finance-manager-image">
+			                	<?php echo wp_get_attachment_image($image_id, 'thumbnail', false, ['class' => 'pn-personal-finance-manager-border-radius-10']); ?>
 			              	</div>
 		              	<?php endif ?>
 			            <?php endforeach ?>
-			          <?php endif ?>
-			        </div>
 			      </div>
 					<?php endif ?>
 				</div>

@@ -762,13 +762,3 @@ add_action('update_option_pn_personal_finance_manager_currency', function($old_v
     delete_transient($transient_key);
 }, 10, 2);
 
-// DEBUG: Comprobar si el transient del tipo de cambio existe
-add_action('init', function() {
-    $currency = get_option('pn_personal_finance_manager_currency', 'eur');
-    $transient_key = 'pn_personal_finance_manager_usd_rate_' . strtolower($currency);
-    if (false !== get_transient($transient_key)) {
-        error_log('Transient ' . $transient_key . ' existe.');
-    } else {
-        error_log('Transient ' . $transient_key . ' NO existe.');
-    }
-});

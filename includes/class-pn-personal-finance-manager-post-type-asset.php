@@ -1033,11 +1033,12 @@ class PN_PERSONAL_FINANCE_MANAGER_Post_Type_Asset {
                   if (array_key_exists('multiple', $pn_personal_finance_manager_field) && $pn_personal_finance_manager_field['multiple']) {
                     $multi_array = [];
                     $empty = true;
+                    $unslashed_multi = isset($_POST[$pn_personal_finance_manager_field['id']]) ? wp_unslash($_POST[$pn_personal_finance_manager_field['id']]) : [];
 
-                    foreach (wp_unslash($_POST[$pn_personal_finance_manager_field['id']]) as $multi_value) {
+                    foreach ((array) $unslashed_multi as $multi_value) {
                       $multi_array[] = PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(
-                        $multi_value, 
-                        $pn_personal_finance_manager_field['input'], 
+                        sanitize_text_field($multi_value),
+                        $pn_personal_finance_manager_field['input'],
                         !empty($pn_personal_finance_manager_field['type']) ? $pn_personal_finance_manager_field['type'] : '',
                         $pn_personal_finance_manager_field // Pass the entire field config
                       );
@@ -1056,10 +1057,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Post_Type_Asset {
                       $empty = true;
 
                       // Sanitize the POST data before using it
-                      $sanitized_post_data = isset($_POST[$pn_personal_finance_manager_multi_field['id']]) ? 
-                        array_map(function($value) {
-                            return sanitize_text_field(wp_unslash($value));
-                        }, (array)$_POST[$pn_personal_finance_manager_multi_field['id']]) : [];
+                      $sanitized_post_data = isset($_POST[$pn_personal_finance_manager_multi_field['id']]) ?
+                        array_map('sanitize_text_field', wp_unslash((array) $_POST[$pn_personal_finance_manager_multi_field['id']])) : [];
                       
                       foreach ($sanitized_post_data as $multi_value) {
                         if (!empty($multi_value)) {

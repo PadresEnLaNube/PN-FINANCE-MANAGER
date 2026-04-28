@@ -66,24 +66,4 @@
     pn_personal_finance_manager_timer(next_step);
 	});
 
-	$('.pn-personal-finance-manager-carousel-main-images .owl-carousel').owlCarousel({
-    margin: 10,
-    center: true,
-    nav: false, 
-    autoplay: true, 
-    autoplayTimeout: 5000, 
-    autoplaySpeed: 2000, 
-    pagination: true, 
-    responsive:{
-      0:{
-        items: 2,
-      },
-      600:{
-        items: 3,
-      },
-      1000:{
-        items: 4,
-      }
-    }, 
-  });
 })(jQuery);

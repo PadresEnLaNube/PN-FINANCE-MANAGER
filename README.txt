@@ -212,11 +212,6 @@ Licensed under BSD-2-Clause
 Copyright 2010-2023 Vladimir Agafonkin
 https://leafletjs.com/
 
-Owl Carousel v2.3.4
-Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
-Copyright 2013-2018 David Deutsch
-https://owlcarousel2.github.io/OwlCarousel2/
-
 Select2 4.0.13
 License MIT - https://github.com/select2/select2/blob/master/LICENSE.md
 https://github.com/select2/select2/tree/master

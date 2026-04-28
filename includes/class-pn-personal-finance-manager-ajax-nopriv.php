@@ -39,17 +39,21 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax_Nopriv {
         exit;
       }
 
-      $pn_personal_finance_manager_ajax_nopriv_type = PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_ajax_nopriv_type']));
-      
-      $pn_personal_finance_manager_ajax_keys = !empty($_POST['pn_personal_finance_manager_ajax_keys']) ? array_map(function($key) {
-        $sanitized_key = wp_unslash($key);
-        return array(
-          'id' => sanitize_key($sanitized_key['id']),
-          'node' => sanitize_key($sanitized_key['node']),
-          'type' => sanitize_key($sanitized_key['type']),
-          'multiple' => sanitize_key($sanitized_key['multiple'])
-        );
-      }, wp_unslash($_POST['pn_personal_finance_manager_ajax_keys'])) : [];
+      $pn_personal_finance_manager_ajax_nopriv_type = sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_ajax_nopriv_type']));
+
+      // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- each element is sanitized individually below
+      $pn_personal_finance_manager_ajax_keys_raw = !empty($_POST['pn_personal_finance_manager_ajax_keys']) ? wp_unslash($_POST['pn_personal_finance_manager_ajax_keys']) : [];
+      $pn_personal_finance_manager_ajax_keys = [];
+      if (is_array($pn_personal_finance_manager_ajax_keys_raw)) {
+        foreach ($pn_personal_finance_manager_ajax_keys_raw as $key) {
+          $pn_personal_finance_manager_ajax_keys[] = [
+            'id' => isset($key['id']) ? sanitize_key($key['id']) : '',
+            'node' => isset($key['node']) ? sanitize_key($key['node']) : '',
+            'type' => isset($key['type']) ? sanitize_key($key['type']) : '',
+            'multiple' => isset($key['multiple']) ? sanitize_key($key['multiple']) : '',
+          ];
+        }
+      }
 
       $pn_personal_finance_manager_key_value = [];
 
@@ -61,17 +65,17 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax_Nopriv {
 
             if (!empty($_POST[$pn_personal_finance_manager_clear_key])) {
               $unslashed_array = wp_unslash($_POST[$pn_personal_finance_manager_clear_key]);
-              
+
               if (!is_array($unslashed_array)) {
                 $unslashed_array = array($unslashed_array);
               }
 
               $sanitized_array = array_map(function($value) use ($pn_personal_finance_manager_key) {
                 return PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(
-                  $value,
+                  sanitize_text_field($value),
                   $pn_personal_finance_manager_key['node'],
                   $pn_personal_finance_manager_key['type'],
-                  $pn_personal_finance_manager_key['field_config'] ?? [],
+                  $pn_personal_finance_manager_key['field_config'] ?? []
                 );
               }, $unslashed_array);
               
@@ -85,14 +89,14 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax_Nopriv {
             }
           } else {
             $sanitized_key = sanitize_key($pn_personal_finance_manager_key['id']);
-            $unslashed_value = !empty($_POST[$sanitized_key]) ? wp_unslash($_POST[$sanitized_key]) : '';
-            
-            $pn_personal_finance_manager_key_id = !empty($unslashed_value) ? 
+            $unslashed_value = !empty($_POST[$sanitized_key]) ? sanitize_text_field(wp_unslash($_POST[$sanitized_key])) : '';
+
+            $pn_personal_finance_manager_key_id = !empty($unslashed_value) ?
               PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(
-                $unslashed_value, 
-                $pn_personal_finance_manager_key['node'], 
+                $unslashed_value,
+                $pn_personal_finance_manager_key['node'],
                 $pn_personal_finance_manager_key['type'],
-                $pn_personal_finance_manager_key['field_config'] ?? [],
+                $pn_personal_finance_manager_key['field_config'] ?? []
               ) : '';
             
               ${$pn_personal_finance_manager_key['id']} = $pn_personal_finance_manager_key_value[$pn_personal_finance_manager_key['id']] = $pn_personal_finance_manager_key_id;
@@ -102,14 +106,14 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax_Nopriv {
 
       switch ($pn_personal_finance_manager_ajax_nopriv_type) {
         case 'pn_personal_finance_manager_form_save':
-          $pn_personal_finance_manager_form_type = !empty($_POST['pn_personal_finance_manager_form_type']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_form_type'])) : '';
+          $pn_personal_finance_manager_form_type = !empty($_POST['pn_personal_finance_manager_form_type']) ? sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_form_type'])) : '';
 
           if (!empty($pn_personal_finance_manager_key_value) && !empty($pn_personal_finance_manager_form_type)) {
-            $pn_personal_finance_manager_form_id = !empty($_POST['pn_personal_finance_manager_form_id']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_form_id'])) : 0;
-            $pn_personal_finance_manager_form_subtype = !empty($_POST['pn_personal_finance_manager_form_subtype']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_form_subtype'])) : '';
-            $user_id = !empty($_POST['pn_personal_finance_manager_form_user_id']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_form_user_id'])) : 0;
-            $post_id = !empty($_POST['pn_personal_finance_manager_form_post_id']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_form_post_id'])) : 0;
-            $post_type = !empty($_POST['pn_personal_finance_manager_form_post_type']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['pn_personal_finance_manager_form_post_type'])) : '';
+            $pn_personal_finance_manager_form_id = !empty($_POST['pn_personal_finance_manager_form_id']) ? sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_form_id'])) : 0;
+            $pn_personal_finance_manager_form_subtype = !empty($_POST['pn_personal_finance_manager_form_subtype']) ? sanitize_text_field(wp_unslash($_POST['pn_personal_finance_manager_form_subtype'])) : '';
+            $user_id = !empty($_POST['pn_personal_finance_manager_form_user_id']) ? absint($_POST['pn_personal_finance_manager_form_user_id']) : 0;
+            $post_id = !empty($_POST['pn_personal_finance_manager_form_post_id']) ? absint($_POST['pn_personal_finance_manager_form_post_id']) : 0;
+            $post_type = !empty($_POST['pn_personal_finance_manager_form_post_type']) ? sanitize_key(wp_unslash($_POST['pn_personal_finance_manager_form_post_type'])) : '';
 
             if (($pn_personal_finance_manager_form_type == 'user' && empty($user_id) && !in_array($pn_personal_finance_manager_form_subtype, ['user_alt_new'])) || ($pn_personal_finance_manager_form_type == 'post' && (empty($post_id) && !(!empty($pn_personal_finance_manager_form_subtype) && in_array($pn_personal_finance_manager_form_subtype, ['post_new', 'post_edit'])))) || ($pn_personal_finance_manager_form_type == 'option' && !is_user_logged_in())) {
               session_start();
@@ -130,9 +134,9 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax_Nopriv {
                   if (!in_array($pn_personal_finance_manager_form_subtype, ['user_alt_new'])) {
                     if (empty($user_id)) {
                       if (PN_PERSONAL_FINANCE_MANAGER_Functions_User::pn_personal_finance_manager_user_is_admin(get_current_user_id())) {
-                        $user_login = !empty($_POST['user_login']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['user_login'])) : 0;
-                        $user_password = !empty($_POST['user_password']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['user_password'])) : 0;
-                        $user_email = !empty($_POST['user_email']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST['user_email'])) : 0;
+                        $user_login = !empty($_POST['user_login']) ? sanitize_user(wp_unslash($_POST['user_login'])) : '';
+                        $user_password = !empty($_POST['user_password']) ? wp_unslash($_POST['user_password']) : '';
+                        $user_email = !empty($_POST['user_email']) ? sanitize_email(wp_unslash($_POST['user_email'])) : '';
 
                         $user_id = PN_PERSONAL_FINANCE_MANAGER_Functions_User::pn_personal_finance_manager_user_insert($user_login, $user_password, $user_email);
                       }
@@ -170,8 +174,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Ajax_Nopriv {
                     if (empty($post_id) && !in_array($post_type, $pn_personal_finance_manager_types_with_own_handlers)) {
                       if (PN_PERSONAL_FINANCE_MANAGER_Functions_User::pn_personal_finance_manager_user_is_admin(get_current_user_id())) {
                         $post_functions = new PN_PERSONAL_FINANCE_MANAGER_Functions_Post();
-                        $title = !empty($_POST[$post_type . '_title']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST[$post_type . '_title'])) : '';
-                        $description = !empty($_POST[$post_type . '_description']) ? PN_PERSONAL_FINANCE_MANAGER_Forms::pn_personal_finance_manager_sanitizer(wp_unslash($_POST[$post_type . '_description'])) : '';
+                        $title = !empty($_POST[$post_type . '_title']) ? sanitize_text_field(wp_unslash($_POST[$post_type . '_title'])) : '';
+                        $description = !empty($_POST[$post_type . '_description']) ? sanitize_textarea_field(wp_unslash($_POST[$post_type . '_description'])) : '';
 
                         if (empty($title)) {
                           $auto_type_label = __('Item', 'pn-personal-finance-manager');

@@ -295,27 +295,20 @@ class PN_PERSONAL_FINANCE_MANAGER_Data {
 		// Llamada a la API open.er-api.com SIN access_key
 		$url = 'https://open.er-api.com/v6/latest/USD';
 		$response = wp_remote_get($url, ['timeout' => 10]);
-		error_log('PnPersonalFinanceManager Debug: Consultando tipo de cambio para ' . $currency_code);
-		error_log('PnPersonalFinanceManager Debug: URL llamada: ' . $url);
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager Debug: Error en la respuesta de la API de tipo de cambio');
 			return 1.0;
 		}
 		$body = wp_remote_retrieve_body($response);
 		$data = json_decode($body, true);
-		error_log('PnPersonalFinanceManager Debug: Respuesta: ' . print_r($data, true));
-		
+
 		// Convertir la moneda a mayúsculas para buscar en la API
 		$currency_upper = strtoupper($currency_code);
-		error_log('PnPersonalFinanceManager Debug: Buscando tipo de cambio para clave: ' . $currency_upper);
-		
+
 		if (isset($data['result']) && $data['result'] === 'success' && isset($data['rates'][$currency_upper]) && is_numeric($data['rates'][$currency_upper])) {
 			$rate = floatval($data['rates'][$currency_upper]);
 			set_transient($transient_key, $rate, 12 * HOUR_IN_SECONDS);
-			error_log('PnPersonalFinanceManager Debug: Guardando transient ' . $transient_key . ' con valor ' . $rate);
 			return $rate;
 		}
-		error_log('PnPersonalFinanceManager Debug: No se encontró el tipo de cambio en la respuesta.');
 		return 1.0;
 	}
 

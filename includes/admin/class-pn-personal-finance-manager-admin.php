@@ -60,16 +60,12 @@ class PN_PERSONAL_FINANCE_MANAGER_Admin {
 	 * @since    1.0.0
 	 */
 	public function pn_personal_finance_manager_enqueue_scripts() {
-		error_log('PnPersonalFinanceManager Debug: Admin enqueue_scripts called');
-		
 		wp_enqueue_media();
 		wp_enqueue_script($this->plugin_name . '-admin', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/admin/pn-personal-finance-manager-admin.js', ['jquery'], $this->version, false);
 		
 		// Load stocks script for admin area
-		error_log('PnPersonalFinanceManager Debug: Loading stocks script: ' . PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-stocks.js');
 		wp_enqueue_script($this->plugin_name . '-stocks', PN_PERSONAL_FINANCE_MANAGER_URL . 'assets/js/pn-personal-finance-manager-stocks.js', ['jquery'], $this->version, false, ['in_footer' => true, 'strategy' => 'defer']);
 		
-		error_log('PnPersonalFinanceManager Debug: Localizing scripts');
 		// Localize scripts with global variables for admin
 		wp_localize_script($this->plugin_name . '-stocks', 'pn_personal_finance_manager_ajax', [
 			'ajax_url' => admin_url('admin-ajax.php'),
@@ -157,7 +153,5 @@ class PN_PERSONAL_FINANCE_MANAGER_Admin {
 			'save_alerts' => esc_html(__('Save alerts', 'pn-personal-finance-manager')),
 			'alerts_saved' => esc_html(__('Saved!', 'pn-personal-finance-manager')),
 		]);
-		
-		error_log('PnPersonalFinanceManager Debug: Admin scripts enqueued successfully');
 	}
 }

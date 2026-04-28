@@ -33,7 +33,10 @@
       "WebFetch(domain:leafletjs.com)",
       "WebFetch(domain:www.npmjs.com)",
       "Bash(wc:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "WebFetch(domain:vimeo.com)",
+      "WebFetch(domain:vzaar.com)",
+      "WebFetch(domain:www.dacast.com)"
     ]
   }
 }

@@ -28,7 +28,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 	public function pn_personal_finance_manager_update_stock_symbols_from_api_cron() {
 		$api_enabled = get_option('pn_personal_finance_manager_stocks_api_enabled', '');
 		if ($api_enabled !== 'on') {
-			error_log('PnPersonalFinanceManager: Stocks API not enabled. Aborting symbol update.');
 			return new WP_Error('api_config_error', 'Stocks API not enabled.');
 		}
 
@@ -36,10 +35,8 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		$result = $this->pn_personal_finance_manager_update_stock_symbols_cache();
 		
 		if ($result && is_array($result)) {
-			error_log('PnPersonalFinanceManager: Stock symbols updated via cron successfully. Total symbols: ' . count($result));
 			return true;
 		} else {
-			error_log('PnPersonalFinanceManager: Failed to update stock symbols via cron.');
 			return new WP_Error('api_fetch_error', 'Failed to retrieve stock symbols from API. The list was empty or invalid.');
 		}
 	}
@@ -51,44 +48,28 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 	 * @return   array    Array of stock symbols with symbol as key and name as value.
 	 */
 	public function pn_personal_finance_manager_get_stock_symbols_for_form() {
-		error_log('PnPersonalFinanceManager Debug: pn_personal_finance_manager_get_stock_symbols_for_form() called');
-		
 		// First, try to get from cache
 		$cached_symbols = get_option('pn_personal_finance_manager_stock_symbols_cache', []);
 		$last_update = get_option('pn_personal_finance_manager_stock_symbols_last_update', 0);
 		$cache_expiry = get_option('pn_personal_finance_manager_stock_symbols_cache_expiry', 24 * HOUR_IN_SECONDS);
 		
-		error_log('PnPersonalFinanceManager Debug: Cache check - cached_symbols count: ' . count($cached_symbols));
-		error_log('PnPersonalFinanceManager Debug: Cache check - last_update: ' . $last_update);
-		error_log('PnPersonalFinanceManager Debug: Cache check - cache_expiry: ' . $cache_expiry);
-		error_log('PnPersonalFinanceManager Debug: Cache check - current_time: ' . current_time('timestamp'));
-		
 		// Check if cache is valid
-		if (!empty($cached_symbols) && is_array($cached_symbols) && 
+		if (!empty($cached_symbols) && is_array($cached_symbols) &&
 			($last_update + $cache_expiry) > current_time('timestamp')) {
-			error_log('PnPersonalFinanceManager Debug: Returning cached symbols: ' . count($cached_symbols));
 			return $cached_symbols;
 		}
-		
-		error_log('PnPersonalFinanceManager Debug: Cache invalid or expired, trying to update');
 		
 		// If cache is empty or expired, try to update it
 		$update_result = $this->pn_personal_finance_manager_update_stock_symbols_cache();
 		
 		if ($update_result && !empty($update_result)) {
-			error_log('PnPersonalFinanceManager Debug: Cache update successful, returning: ' . count($update_result));
 			return $update_result;
 		}
 		
-		error_log('PnPersonalFinanceManager Debug: Cache update failed, checking for old cache');
-		
 		// If update failed, return cached data if available, otherwise fallback
 		if (!empty($cached_symbols) && is_array($cached_symbols)) {
-			error_log('PnPersonalFinanceManager Debug: Returning old cached symbols: ' . count($cached_symbols));
 			return $cached_symbols;
 		}
-		
-		error_log('PnPersonalFinanceManager Debug: No cache available, returning popular symbols');
 		
 		// Final fallback to popular symbols
 		return $this->pn_personal_finance_manager_get_popular_symbols();
@@ -115,10 +96,7 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 			update_option('pn_personal_finance_manager_stock_symbols_cache', $symbols, false);
 			update_option('pn_personal_finance_manager_stock_symbols_last_update', current_time('timestamp'), false);
 			update_option('pn_personal_finance_manager_stock_symbols_cache_expiry', 24 * HOUR_IN_SECONDS, false);
-			
-			// Log successful update
-			error_log('PnPersonalFinanceManager: Stock symbols cache updated successfully. Total symbols: ' . count($symbols));
-			
+
 			return $symbols;
 		}
 		
@@ -141,7 +119,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		]);
 
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager: Twelve Data stocks API error: ' . $response->get_error_message());
 			return $this->pn_personal_finance_manager_get_popular_symbols();
 		}
 
@@ -149,7 +126,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		$data = json_decode($body, true);
 
 		if (empty($data['data']) || !is_array($data['data'])) {
-			error_log('PnPersonalFinanceManager: Twelve Data stocks API returned empty or invalid data.');
 			return $this->pn_personal_finance_manager_get_popular_symbols();
 		}
 
@@ -265,7 +241,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		]);
 
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager: Twelve Data quote error: ' . $response->get_error_message());
 			return false;
 		}
 
@@ -273,8 +248,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		$data = json_decode($body, true);
 
 		if (empty($data) || isset($data['code']) || empty($data['close'])) {
-			$error_msg = isset($data['message']) ? $data['message'] : 'Unknown error';
-			error_log('PnPersonalFinanceManager: Twelve Data quote API error: ' . $error_msg);
 			return false;
 		}
 
@@ -402,7 +375,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		]);
 
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager: Twelve Data time_series error: ' . $response->get_error_message());
 			return false;
 		}
 
@@ -410,8 +382,6 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 		$data = json_decode($body, true);
 
 		if (empty($data['values']) || !is_array($data['values']) || isset($data['code'])) {
-			$error_msg = isset($data['message']) ? $data['message'] : 'Unknown error';
-			error_log('PnPersonalFinanceManager: Twelve Data time_series API error: ' . $error_msg);
 			return false;
 		}
 
@@ -1236,7 +1206,7 @@ class PN_PERSONAL_FINANCE_MANAGER_Stocks {
 
 		if (empty($user_assets) && empty($user_liabilities)) {
 			return '<div class="pn-personal-finance-manager-user-assets-empty">' .
-				   '<p>' . __('No assets found.', 'pn-personal-finance-manager') . '</p>' .
+				   '<p>' . esc_html__('No assets found.', 'pn-personal-finance-manager') . '</p>' .
 				   '</div>';
 		}
 
@@ -3121,9 +3091,7 @@ PNPFM_JS;
 		$result1 = delete_option('pn_personal_finance_manager_stock_symbols_cache');
 		$result2 = delete_option('pn_personal_finance_manager_stock_symbols_last_update');
 		$result3 = delete_option('pn_personal_finance_manager_stock_symbols_cache_expiry');
-		
-		error_log('PnPersonalFinanceManager: Stock symbols cache cleared.');
-		
+
 		return $result1 && $result2 && $result3;
 	}
 
@@ -3139,12 +3107,6 @@ PNPFM_JS;
 		
 		// Force update
 		$result = $this->pn_personal_finance_manager_update_stock_symbols_cache();
-		
-		if ($result && is_array($result)) {
-			error_log('PnPersonalFinanceManager: Stock symbols cache force updated successfully. Total symbols: ' . count($result));
-		} else {
-			error_log('PnPersonalFinanceManager: Failed to force update stock symbols cache.');
-		}
 		
 		return $result;
 	}
@@ -3262,13 +3224,11 @@ PNPFM_JS;
 		]);
 
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager: CoinGecko coins/markets API error: ' . $response->get_error_message());
 			return $this->pn_personal_finance_manager_get_popular_crypto_symbols();
 		}
 
 		$http_code = wp_remote_retrieve_response_code($response);
 		if ($http_code !== 200) {
-			error_log('PnPersonalFinanceManager: CoinGecko API returned HTTP ' . $http_code);
 			return $this->pn_personal_finance_manager_get_popular_crypto_symbols();
 		}
 
@@ -3276,7 +3236,6 @@ PNPFM_JS;
 		$data = json_decode($body, true);
 
 		if (empty($data) || !is_array($data)) {
-			error_log('PnPersonalFinanceManager: CoinGecko API returned empty or invalid data.');
 			return $this->pn_personal_finance_manager_get_popular_crypto_symbols();
 		}
 
@@ -3386,7 +3345,6 @@ PNPFM_JS;
 		]);
 
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager: CoinGecko simple/price error: ' . $response->get_error_message());
 			return false;
 		}
 
@@ -3394,7 +3352,6 @@ PNPFM_JS;
 		$data = json_decode($body, true);
 
 		if (empty($data) || !isset($data[$coin_id])) {
-			error_log('PnPersonalFinanceManager: CoinGecko simple/price returned no data for ' . $coin_id);
 			return false;
 		}
 
@@ -3474,7 +3431,6 @@ PNPFM_JS;
 		]);
 
 		if (is_wp_error($response)) {
-			error_log('PnPersonalFinanceManager: CoinGecko market_chart error: ' . $response->get_error_message());
 			return false;
 		}
 
@@ -3482,7 +3438,6 @@ PNPFM_JS;
 		$data = json_decode($body, true);
 
 		if (empty($data['prices']) || !is_array($data['prices'])) {
-			error_log('PnPersonalFinanceManager: CoinGecko market_chart returned empty data for ' . $coin_id);
 			return false;
 		}
 
@@ -3721,12 +3676,7 @@ PNPFM_JS;
 	 * @since    1.1.0
 	 */
 	public function pn_personal_finance_manager_update_crypto_symbols_from_api_cron() {
-		$result = $this->pn_personal_finance_manager_update_crypto_symbols_cache();
-		if ($result && is_array($result)) {
-			error_log('PnPersonalFinanceManager: Crypto symbols updated via cron. Total: ' . count($result));
-		} else {
-			error_log('PnPersonalFinanceManager: Failed to update crypto symbols via cron.');
-		}
+		$this->pn_personal_finance_manager_update_crypto_symbols_cache();
 	}
 
 	/**
@@ -3797,7 +3747,5 @@ PNPFM_JS;
 			// Rate limiting: CoinGecko free tier allows ~10-30 calls/min
 			sleep(3);
 		}
-
-		error_log('PnPersonalFinanceManager: Daily crypto price recording completed. Recorded: ' . $recorded_count . '/' . count($unique_coins));
 	}
 }

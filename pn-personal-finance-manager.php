@@ -343,22 +343,13 @@ add_action('pn_personal_finance_manager_update_stock_symbols_cron', 'pn_personal
  */
 function pn_personal_finance_manager_update_stock_symbols_cron_callback() {
     try {
-        // Include the stocks class
         require_once plugin_dir_path(__FILE__) . 'includes/class-pn-personal-finance-manager-stocks.php';
-        
+
         if (class_exists('PN_PERSONAL_FINANCE_MANAGER_Stocks')) {
             $stocks = new PN_PERSONAL_FINANCE_MANAGER_Stocks();
-            $result = $stocks->pn_personal_finance_manager_update_stock_symbols_from_api_cron();
-            
-            if ($result === true) {
-                error_log('PnPersonalFinanceManager: Cron job completed successfully - stock symbols cache updated.');
-            } else {
-                error_log('PnPersonalFinanceManager: Cron job failed - ' . (is_wp_error($result) ? $result->get_error_message() : 'Unknown error'));
-            }
-        } else {
-            error_log('PnPersonalFinanceManager: Cron job failed - PN_PERSONAL_FINANCE_MANAGER_Stocks class not found.');
+            $stocks->pn_personal_finance_manager_update_stock_symbols_from_api_cron();
         }
     } catch (Exception $e) {
-        error_log('PnPersonalFinanceManager: Cron job failed with exception - ' . $e->getMessage());
+        // Silently fail - cron jobs should not produce output
     }
 }
